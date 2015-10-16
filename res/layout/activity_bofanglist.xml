@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:background="@drawable/album_head_bg"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dip"
+                        android:gravity="center" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:id="@+id/head_left_btn"
+                                android:layout_width="80dip"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/head_press"
+                                android:gravity="left|center" >
+
+                                <ImageView
+                                    android:layout_width="20dip"
+                                    android:layout_height="20dip"
+                                    android:layout_marginLeft="10dip"
+                                    android:background="@drawable/back_btn" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="返回"
+                                    android:textColor="@color/WHITE"
+                                    android:textSize="@dimen/activity_head_right" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/head_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="标题"
+                            android:textColor="@color/WHITE"
+                            android:textSize="@dimen/activity_head_center" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:visibility="invisible" >
+
+                            <LinearLayout
+                                android:layout_width="80dip"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/head_press"
+                                android:gravity="left|center" >
+
+                                <ImageView
+                                    android:layout_width="20dip"
+                                    android:layout_height="20dip"
+                                    android:layout_marginLeft="10dip"
+                                    android:background="@drawable/back_btn" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="返回"
+                                    android:textColor="@color/WHITE"
+                                    android:textSize="@dimen/activity_head_right" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="100dip"
+                            android:layout_height="100dip"
+                            android:layout_margin="10dip"
+                            android:src="@drawable/lazy_fm_img" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center" >
+
+                                <ImageView
+                                    android:layout_width="30dip"
+                                    android:layout_height="30dip"
+                                    android:layout_marginLeft="15dip"
+                                    android:src="@drawable/children_unchecked" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dip"
+                                    android:text="电台名称"
+                                    android:textColor="@color/WHITE" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dip"
+                                android:text="电台介绍：点击进入介绍详情页>"
+                                android:textColor="@color/WHITE" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dip"
+                        android:background="@color/WHITE" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/tv_guid1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="10dip"
+                                android:text="收藏"
+                                android:textColor="@color/WHITE"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/WHITE" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/tv_guid2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="10dip"
+                                android:text="批量下载"
+                                android:textColor="@color/WHITE"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/WHITE" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/tv_guid3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="10dip"
+                                android:text="相关推荐"
+                                android:textColor="@color/WHITE"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/lin_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/WHITE"
+                        android:padding="10dip" >
+
+                        <ImageView
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:src="@drawable/tab1_down" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dip" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="播放标题" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dip"
+                                android:text="下载 ：300   播放 ： 300    赞：333" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lin_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/WHITE"
+                        android:padding="10dip" >
+
+                        <ImageView
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:src="@drawable/tab1_down" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dip" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="播放标题" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dip"
+                                android:text="下载 ：300   播放 ： 300    赞：333" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lin_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/WHITE"
+                        android:padding="10dip" >
+
+                        <ImageView
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:src="@drawable/tab1_down" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dip" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="播放标题" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dip"
+                                android:text="下载 ：300   播放 ： 300    赞：333" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lin_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/WHITE"
+                        android:padding="10dip" >
+
+                        <ImageView
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:src="@drawable/tab1_down" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dip" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="播放标题" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dip"
+                                android:text="下载 ：300   播放 ： 300    赞：333" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lin_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/WHITE"
+                        android:padding="10dip" >
+
+                        <ImageView
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:src="@drawable/tab1_down" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dip" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="播放标题" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dip"
+                                android:text="下载 ：300   播放 ： 300    赞：333" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lin_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/WHITE"
+                        android:padding="10dip" >
+
+                        <ImageView
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:src="@drawable/tab1_down" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dip" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="播放标题" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dip"
+                                android:text="下载 ：300   播放 ： 300    赞：333" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lin_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/WHITE"
+                        android:padding="10dip" >
+
+                        <ImageView
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:src="@drawable/tab1_down" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dip" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="播放标题" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dip"
+                                android:text="下载 ：300   播放 ： 300    赞：333" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lin_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dip"
+                        android:background="@color/WHITE"
+                        android:padding="10dip" >
+
+                        <ImageView
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:src="@drawable/tab1_down" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dip" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="播放标题" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="10dip"
+                                android:text="下载 ：300   播放 ： 300    赞：333" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

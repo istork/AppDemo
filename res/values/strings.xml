@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">我听</string>
+    <string name="channel_id">woting</string>
+    <string name="app_local_path">/woting/</string>
+	
+</resources>

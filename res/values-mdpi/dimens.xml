@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_bottom">140dip</dimen>
+    <dimen name="edittexttvsize">14sp</dimen>
+    <dimen name="layout_marginleft">10dip</dimen>
+    <dimen name="text_size">15sp</dimen>
+    <dimen name="url_item_text_size">16sp</dimen>
+     <dimen name="start_pic_width">225dp</dimen>
+    <dimen name="start_pic_hight">260dp</dimen>
+    <dimen name="start_pic_top">50dp</dimen>
+</resources>
