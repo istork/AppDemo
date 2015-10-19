@@ -46,6 +46,7 @@ OnClickListener {
 	private Context context;
 	private int offset;
 	private LinearLayout lin_find;
+	private LinearLayout head_left_btn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +65,15 @@ OnClickListener {
 		view2 = (TextView) findViewById(R.id.tv_guid2);
 		view3 = (TextView) findViewById(R.id.tv_guid3);
 		view4 = (TextView) findViewById(R.id.tv_guid4);
+		head_left_btn = (LinearLayout) findViewById(R.id.head_left_btn);
+		head_left_btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			finish();
+			}
+		});
 		lin_find = (LinearLayout) findViewById(R.id.lin_find);
 		lin_find.setOnClickListener(new OnClickListener() {
 			

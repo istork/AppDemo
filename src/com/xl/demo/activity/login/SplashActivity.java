@@ -3,6 +3,7 @@ package com.xl.demo.activity.login;
 
 import com.xl.demo.R;
 import com.xl.demo.activity.main.MainActivity;
+import com.xl.demo.receiver.FloatingWindowService;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,6 +18,9 @@ public class SplashActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
 //		context = SplashActivity.this;
+		Intent show = new Intent(this, FloatingWindowService.class);
+		show.putExtra(FloatingWindowService.OPERATION, FloatingWindowService.OPERATION_SHOW);
+        startService(show);
 		new Handler().postDelayed(new MyRunnable(), LOADFINISH);
 	}
 

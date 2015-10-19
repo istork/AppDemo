@@ -5,181 +5,73 @@
     android:background="@color/app_bg"
     android:orientation="vertical" >
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:scrollbars="none"
-        android:layout_height="match_parent" >
+        android:layout_height="45dip"
+        android:gravity="center_vertical" >
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical" >
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="match_parent"
-                android:layout_height="160dip"
-                android:scaleType="centerCrop"
-                android:src="@drawable/focus_image_default4" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:orientation="vertical" >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="35dip"
-                    android:orientation="horizontal" >
-
-                    <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="left|center" >
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dip"
-                            android:src="@drawable/finding_title_tag" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dip"
-                            android:text="推荐内容"
-                            android:textColor="@color/s_green" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" >
-
-                    <LinearLayout
-                        android:id="@+id/lin_1"
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-
-                        <ImageView
-                            android:layout_width="100dip"
-                            android:layout_height="100dip"
-                            android:src="@drawable/lazy_fm_img" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="5dip"
-                            android:text="我听电台1" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-
-                        <ImageView
-                            android:layout_width="100dip"
-                            android:layout_height="100dip"
-                            android:src="@drawable/imagexcs" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="5dip"
-                            android:text="我听电台2" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical" >
-
-                        <ImageView
-                            android:layout_width="100dip"
-                            android:layout_height="100dip"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pesnews" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:padding="5dip"
-                            android:text="我听电台3" />
-                    </LinearLayout>
-                </LinearLayout>
+                android:layout_width="80dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/head_press"
+                android:gravity="left|center" >
             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/head_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="我听FM"
+                android:textColor="@color/orangered"
+                android:textSize="@dimen/activity_head_center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_margin="5dip"
+        android:layout_weight="1"
+        android:background="@color/WHITE"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
-                android:background="@color/WHITE"
                 android:orientation="vertical" >
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="35dip"
-                    android:orientation="horizontal" >
-
-                    <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="left|center" >
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dip"
-                            android:src="@drawable/finding_title_tag" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dip"
-                            android:text="精品听单"
-                            android:textColor="@color/s_green" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="right|center" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="更多"
-                            android:textColor="@color/s_green" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dip"
-                            android:layout_marginRight="10dip"
-                            android:src="@drawable/live_more" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                     android:id="@+id/lin_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/WHITE"
                     android:gravity="left|center"
-                    android:padding="10dip" >
+                    android:padding="5dip" >
 
                     <ImageView
                         android:layout_width="60dip"
@@ -210,26 +102,21 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/live_more" />
+                        android:src="@drawable/album_pause" />
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0.1dip"
-                    android:background="@color/text_line_1" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/WHITE"
                     android:gravity="left|center"
-                    android:padding="10dip" >
+                    android:padding="5dip" >
 
                     <ImageView
                         android:layout_width="60dip"
                         android:layout_height="60dip"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/focus_image_default4" />
+                        android:src="@drawable/default_category_cngoodvoice" />
 
                     <LinearLayout
                         android:layout_width="0dip"
@@ -254,203 +141,350 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/live_more" />
+                        android:src="@drawable/album_play" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE"
+                    android:gravity="left|center"
+                    android:padding="5dip" >
+
+                    <ImageView
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/focus_image_default1" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电台" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dip"
+                            android:text="这是该电台的介绍" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/album_play" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE"
+                    android:gravity="left|center"
+                    android:padding="5dip" >
+
+                    <ImageView
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/focus_image_default2" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电台" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dip"
+                            android:text="这是该电台的介绍" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/album_play" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE"
+                    android:gravity="left|center"
+                    android:padding="5dip" >
+
+                    <ImageView
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_category_all" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电台" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dip"
+                            android:text="这是该电台的介绍" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/album_play" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE"
+                    android:gravity="left|center"
+                    android:padding="5dip" >
+
+                    <ImageView
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/focus_image_default3" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电台" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dip"
+                            android:text="这是该电台的介绍" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/album_play" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE"
+                    android:gravity="left|center"
+                    android:padding="5dip" >
+
+                    <ImageView
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_category_cngoodvoice" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电台" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dip"
+                            android:text="这是该电台的介绍" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/album_play" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/WHITE"
+                    android:gravity="left|center"
+                    android:padding="5dip" >
+
+                    <ImageView
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/focus_image_default2" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电台" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dip"
+                            android:text="这是该电台的介绍" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/album_play" />
                 </LinearLayout>
             </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@drawable/player_title_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="3" >
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
-                android:background="@color/WHITE"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dip"
+                android:padding="20dip" >
+
+                <LinearLayout
+                    android:id="@+id/lin_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_marginBottom="30dip"
+                        android:src="@drawable/btn_detail_batch_download_pressed" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical" >
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dip"
+                    android:src="@drawable/btn_record_start" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginRight="10dip"
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dip"
-                    android:orientation="horizontal" >
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
 
                     <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
                         android:layout_weight="1"
-                        android:gravity="left|center" >
+                        android:gravity="center"
+                        android:orientation="vertical" >
 
                         <ImageView
+                            android:id="@+id/imageView2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dip"
-                            android:src="@drawable/finding_title_tag" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dip"
-                            android:text="最新发现"
-                            android:textColor="@color/s_green" />
+                            android:src="@drawable/pre_icon_transparent_normal" />
                     </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                     android:id="@+id/lin_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/WHITE"
-                    android:gravity="left|center"
-                    android:padding="10dip" >
-
-                    <ImageView
-                        android:layout_width="60dip"
-                        android:layout_height="60dip"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/children_unchecked" />
 
                     <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
                         android:layout_weight="1"
-                        android:gravity="left|center"
-                        android:orientation="vertical"
-                        android:paddingLeft="10dip" >
+                        android:gravity="center"
+                        android:orientation="vertical" >
 
-                        <TextView
+                        <ImageView
+                            android:id="@+id/imageView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="发现1" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="10dip"
-                            android:text="介绍" />
+                            android:src="@drawable/widget_play_normal" />
                     </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/live_more" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0.1dip"
-                    android:background="@color/text_line_1" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/WHITE"
-                    android:gravity="left|center"
-                    android:padding="10dip" >
-
-                    <ImageView
-                        android:layout_width="60dip"
-                        android:layout_height="60dip"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/find_ring_img" />
 
                     <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
                         android:layout_weight="1"
-                        android:gravity="left|center"
-                        android:orientation="vertical"
-                        android:paddingLeft="10dip" >
+                        android:gravity="center"
+                        android:orientation="vertical" >
 
-                        <TextView
+                        <ImageView
+                            android:id="@+id/imageView4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="发现2" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="10dip"
-                            android:text="介绍" />
+                            android:src="@drawable/next_icon_transparent_normal" />
                     </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/live_more" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/WHITE"
-                    android:gravity="left|center"
-                    android:padding="10dip" >
-
-                    <ImageView
-                        android:layout_width="60dip"
-                        android:layout_height="60dip"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/finding_activity_img" />
-
-                    <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="left|center"
-                        android:orientation="vertical"
-                        android:paddingLeft="10dip" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="发现3" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="10dip"
-                            android:text="介绍" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/live_more" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/WHITE"
-                    android:gravity="left|center"
-                    android:padding="10dip" >
-
-                    <ImageView
-                        android:layout_width="60dip"
-                        android:layout_height="60dip"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/finding_mart_img" />
-
-                    <LinearLayout
-                        android:layout_width="0dip"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="left|center"
-                        android:orientation="vertical"
-                        android:paddingLeft="10dip" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="发现4" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="10dip"
-                            android:text="介绍" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/live_more" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </LinearLayout>

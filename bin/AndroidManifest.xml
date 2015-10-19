@@ -27,11 +27,23 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
-        <activity android:name=".activity.home.HomeActivity" >
+        <activity
+            android:name=".activity.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
         </activity>
-        <activity android:name=".activity.goods.GoodsIndexActivity" >
+        <activity
+            android:name=".activity.goods.GoodsIndexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
         </activity>
-        <activity android:name=".activity.person.PersonActivity" >
+        <activity
+            android:name=".activity.person.PersonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
             android:name="com.xl.demo.activity.login.LoginActivity"
@@ -135,6 +147,15 @@
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
+        <activity
+            android:name=".activity.home.FirstActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <service android:name=".receiver.FloatingWindowService" >
+        </service>
     </application>
     <!-- 蓝牙管理 -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -198,7 +219,7 @@
     </uses-permission>
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <!-- Push service 运行需要的权限 -->
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />

@@ -17,6 +17,7 @@ import com.xl.demo.ui.BaseFragment;
 
 public class CCFragment extends BaseFragment implements OnClickListener {
 	private FragmentActivity context;
+	private LinearLayout lin_1;
 //	private LinearLayout lin_1;
 //	private LinearLayout lin_2;
 //	private LinearLayout lin_3;
@@ -27,26 +28,30 @@ public class CCFragment extends BaseFragment implements OnClickListener {
 //	private LinearLayout lin_8;
 //	private LinearLayout lin_9;
 //	private LinearLayout lin_10;
+	private LinearLayout lin_a;
+	private LinearLayout lin_b;
+	private LinearLayout lin_more;
+	private LinearLayout lin_c;
 
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
     		Bundle savedInstanceState) {
     	View rootView = inflater.inflate(R.layout.fragment_cc, container, false);
     	context = this.getActivity();
-//    	lin_1 = (LinearLayout) rootView.findViewById(R.id.lin_1);
-//    	lin_2 = (LinearLayout) rootView.findViewById(R.id.lin_2);
-//    	lin_3 = (LinearLayout) rootView.findViewById(R.id.lin_3);
-//    	lin_4 = (LinearLayout) rootView.findViewById(R.id.lin_4);
-//    	lin_5 = (LinearLayout) rootView.findViewById(R.id.lin_5);
+    	lin_1 = (LinearLayout) rootView.findViewById(R.id.lin_1);
+    	lin_a = (LinearLayout) rootView.findViewById(R.id.lin_a);
+    	lin_b = (LinearLayout) rootView.findViewById(R.id.lin_b);
+    	lin_more = (LinearLayout) rootView.findViewById(R.id.lin_more);
+    	lin_c = (LinearLayout) rootView.findViewById(R.id.lin_c);
 //    	lin_6 = (LinearLayout) rootView.findViewById(R.id.lin_6);
 //    	lin_7 = (LinearLayout) rootView.findViewById(R.id.lin_7);
 //    	lin_8 = (LinearLayout) rootView.findViewById(R.id.lin_8);
 //    	lin_9 = (LinearLayout) rootView.findViewById(R.id.lin_9);
 //    	lin_10 = (LinearLayout) rootView.findViewById(R.id.lin_10);
 //    	
-//    	lin_1.setOnClickListener(this);
-//    	lin_2.setOnClickListener(this);
-//    	lin_3.setOnClickListener(this);
+    	lin_1.setOnClickListener(this);
+    	lin_c.setOnClickListener(this);
+    	lin_more.setOnClickListener(this);
 //    	lin_4.setOnClickListener(this);
 //    	lin_5.setOnClickListener(this);
 //    	lin_6.setOnClickListener(this);
@@ -54,22 +59,27 @@ public class CCFragment extends BaseFragment implements OnClickListener {
 //    	lin_8.setOnClickListener(this);
 //    	lin_9.setOnClickListener(this);
 //    	lin_10.setOnClickListener(this);
+    	lin_b.setVisibility(View.GONE);
+		lin_a.setVisibility(View.VISIBLE);
     	return rootView;
     }
 
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-//		switch (v.getId()) {
-//		case R.id.lin_1:
-//			startActivity(new Intent(context, SpeakaActivity.class));
-//			break;
-//		case R.id.lin_2:
-//			startActivity(new Intent(context, SpeakaActivity.class));
-//			break;
-//		case R.id.lin_3:
-//			startActivity(new Intent(context, SpeakaActivity.class));
-//			break;
+		switch (v.getId()) {
+		case R.id.lin_1:
+			lin_a.setVisibility(View.GONE);
+			lin_b.setVisibility(View.VISIBLE);
+			break;
+		case R.id.lin_c:
+			lin_a.setVisibility(View.GONE);
+			lin_b.setVisibility(View.VISIBLE);
+			break;
+		case R.id.lin_more:
+			lin_b.setVisibility(View.GONE);
+			lin_a.setVisibility(View.VISIBLE);
+			break;
 //		case R.id.lin_4:
 //			startActivity(new Intent(context, SpeakaActivity.class));
 //			break;
@@ -92,9 +102,9 @@ public class CCFragment extends BaseFragment implements OnClickListener {
 //			startActivity(new Intent(context, SpeakaActivity.class));
 //			break;
 //
-//		default:
-//			break;
-//		}
+		default:
+			break;
+		}
 	}
 
     

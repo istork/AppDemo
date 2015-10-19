@@ -3,6 +3,7 @@ package com.xl.demo.activity.main;
 
 import com.xl.demo.R;
 import com.xl.demo.activity.goods.BoFangActivity;
+import com.xl.demo.activity.home.FirstActivity;
 import com.xl.demo.activity.home.HomeActivity;
 import com.xl.demo.activity.person.PersonActivity;
 import com.xl.demo.activity.set.SetActivity;
@@ -83,7 +84,7 @@ public class MainActivity extends TabActivity implements OnClickListener  {
 		 * 主页跳转的五个界面
 		 */	 
 		tabHost.addTab(tabHost.newTabSpec("shouye").setIndicator("shouye")
-				.setContent(new Intent(this, HomeActivity.class)));//首页
+				.setContent(new Intent(this, FirstActivity.class)));//首页
 		tabHost.addTab(tabHost.newTabSpec("duijiang").setIndicator("duijiang")
 				.setContent(new Intent(this, DuiJiangActivity.class)));//对讲
 //		tabHost.addTab(tabHost.newTabSpec("bofang").setIndicator("bofang")

@@ -4,11 +4,76 @@
     android:layout_height="match_parent"
     android:background="@color/app_bg"
     android:orientation="vertical" >
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:gravity="center_vertical" >
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/head_left_btn"
+                android:layout_width="80dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/head_press"
+                android:gravity="left|center" >
+
+                <ImageView
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="10dip"
+                    android:src="@drawable/voice_search" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="我听FM"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/activity_head_center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:gravity="right|center" >
+
+            <LinearLayout
+                android:layout_width="60dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/head_press"
+                android:gravity="right|center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:text="清空"
+                    android:textColor="@color/WHITE"
+                    android:textSize="@dimen/activity_head_right" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dip"
         android:background="@color/app_bg"
+        android:visibility="gone"
         android:gravity="center_vertical" >
 
         <TextView
