@@ -388,6 +388,16 @@
         android:background="@drawable/player_title_bg"
         android:orientation="vertical" >
 
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:background="@color/transparent"
+            android:textColor="@color/red"
+            android:ems="10" >
+
+        </EditText>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dip"
@@ -416,6 +426,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/lin_findvoice"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
