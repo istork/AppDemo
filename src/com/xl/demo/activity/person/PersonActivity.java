@@ -2,18 +2,24 @@ package com.xl.demo.activity.person;
 
 
 
+import com.shenstec.activity.annotation.ViewInject;
 import com.xl.demo.R;
+import com.xl.demo.activity.login.LoginActivity;
 import com.xl.demo.commactivity.BaseActivity;
 import com.xl.demo.utils.ToastUtil;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
 
-public class PersonActivity extends BaseActivity{
+public class PersonActivity extends BaseActivity implements OnClickListener{
 //	@ViewInject(id=R.id.head_left_btn,click=true)
 //	private LinearLayout pubBtn;
-//	@ViewInject(id=R.id.head_name_tv)
-//	private TextView titleTV;
+	@ViewInject(id=R.id.tv_login,click=true)
+	private TextView tv_login;
 //	@ViewInject(id=R.id.head_right_btn,click=true)
 //	private LinearLayout setBtn;
 	
@@ -29,6 +35,15 @@ public class PersonActivity extends BaseActivity{
     public void onClick(View v) {
     	// TODO Auto-generated method stub
     	super.onClick(v);
+    	switch (v.getId()) {
+		case R.id.tv_login:
+			Intent intent = new Intent(this,LoginActivity.class);
+			startActivity(intent);
+			break;
+
+		default:
+			break;
+		}
     	
 		
     }

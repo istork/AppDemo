@@ -17,13 +17,69 @@
             android:orientation="vertical" >
 
             <LinearLayout
+                android:id="@+id/lin_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:gravity="left|center"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:src="@drawable/finding_activity_img" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新的朋友" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lin_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dip"
+                android:background="@color/WHITE"
+                android:gravity="left|center"
+                android:padding="5dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:src="@drawable/find_ring_img" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="群聊" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/lin_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="10dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
@@ -38,49 +94,27 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dip" >
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="left|center" >
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="群组A               通话中。。。" />
-
-                        <ImageView
-                            android:id="@+id/imageView1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/voice_search" />
-                    </LinearLayout>
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25000      共60人" />
-                </LinearLayout>
+                        android:text="朋友" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/lin_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="1dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
                     android:layout_height="60dip"
-                    android:src="@drawable/app_logo" />
+                    android:src="@drawable/children_unchecked" />
 
                 <LinearLayout
                     android:layout_width="0dip"
@@ -93,29 +127,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="群组B" />
+                        android:text="朋友" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25001      共70人" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/lin_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="1dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
@@ -133,29 +157,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="群组C" />
+                        android:text="朋友" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25002      共80人" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="1dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
@@ -173,34 +186,23 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="群组D" />
+                        android:text="朋友" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25003      共90人" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="1dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
                     android:layout_height="60dip"
-                    android:src="@drawable/app_logo" />
+                    android:src="@drawable/children_unchecked" />
 
                 <LinearLayout
                     android:layout_width="0dip"
@@ -213,29 +215,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="群组E" />
+                        android:text="朋友" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25004      共60人" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="1dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
@@ -253,29 +244,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="群组E" />
+                        android:text="朋友" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25004      共60人" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="1dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
@@ -293,29 +273,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="群组E" />
+                        android:text="朋友" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25004      共60人" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="1dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
@@ -333,29 +302,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="群组E" />
+                        android:text="朋友" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25004      共60人" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="1dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
@@ -373,29 +331,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="群组E" />
+                        android:text="朋友" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25004      共60人" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/lin_10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="1dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center"
-                android:padding="10dip" >
+                android:padding="5dip" >
 
                 <ImageView
                     android:layout_width="60dip"
@@ -413,19 +360,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="群组E" />
+                        android:text="朋友" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dip"
-                        android:text="群id:25004      共60人" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/live_more" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

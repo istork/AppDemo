@@ -29,7 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="主页"
+                    android:text="通话中"
                     android:textColor="@color/orangered"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -42,23 +42,6 @@
 
                 <TextView
                     android:id="@+id/tv_guid2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="群组"
-                    android:textColor="@color/s_green"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center" >
-
-                <TextView
-                    android:id="@+id/tv_guid3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -78,19 +61,6 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dip"
                     android:src="@drawable/rec_bg_add" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lin_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center" >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dip"
-                    android:src="@drawable/bg_setting_on" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

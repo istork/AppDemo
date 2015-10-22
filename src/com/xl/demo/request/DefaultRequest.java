@@ -6,6 +6,8 @@ import com.xl.demo.utils.PhoneMessage;
 
 public class DefaultRequest {
 	
+	/**手机imei*/
+	public String imei = PhoneMessage.imei;
 	/**手机品牌*/
 	public String machine = PhoneMessage.productor;
 	/**手机型号*/

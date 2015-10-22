@@ -54,6 +54,7 @@ public class LoginProvider extends DefaultDataProvider {
 			jsonObject.put("machine", request.machine);
 			jsonObject.put("type", request.type);
 			jsonObject.put("screen", request.screen);
+			jsonObject.put("imei", request.imei);
 			jsonObject.put("mobile", username);
 			jsonObject.put("password", password);
 			new LoginRemoteHandle(this, request, jsonObject.toString(), taskId).start();

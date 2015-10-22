@@ -25,11 +25,15 @@ public class BBFragment extends BaseFragment  implements OnClickListener{
 	private LinearLayout lin_8;
 	private LinearLayout lin_9;
 	private LinearLayout lin_10;
+	private LinearLayout lin_a;
+	private LinearLayout lin_b;
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
     		Bundle savedInstanceState) {
     	View rootView = inflater.inflate(R.layout.fragment_bb, container, false);
     	context = this.getActivity();
+    	lin_a = (LinearLayout) rootView.findViewById(R.id.lin_a);
+    	lin_b = (LinearLayout) rootView.findViewById(R.id.lin_b);
     	lin_1 = (LinearLayout) rootView.findViewById(R.id.lin_1);
     	lin_2 = (LinearLayout) rootView.findViewById(R.id.lin_2);
     	lin_3 = (LinearLayout) rootView.findViewById(R.id.lin_3);
@@ -41,6 +45,8 @@ public class BBFragment extends BaseFragment  implements OnClickListener{
     	lin_9 = (LinearLayout) rootView.findViewById(R.id.lin_9);
     	lin_10 = (LinearLayout) rootView.findViewById(R.id.lin_10);
     	
+    	lin_a.setOnClickListener(this);
+    	lin_b.setOnClickListener(this);
     	lin_1.setOnClickListener(this);
     	lin_2.setOnClickListener(this);
     	lin_3.setOnClickListener(this);
@@ -57,35 +63,41 @@ public class BBFragment extends BaseFragment  implements OnClickListener{
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
+		case R.id.lin_a:
+			startActivity(new Intent(context, SpeakAddActivity.class));
+			break;
+		case R.id.lin_b:
+			startActivity(new Intent(context, SpeakgroupActivity.class));
+			break;
 		case R.id.lin_1:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 		case R.id.lin_2:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 		case R.id.lin_3:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 		case R.id.lin_4:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 		case R.id.lin_5:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 		case R.id.lin_6:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 		case R.id.lin_7:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 		case R.id.lin_8:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 		case R.id.lin_9:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 		case R.id.lin_10:
-			startActivity(new Intent(context, SpeakActivity.class));
+			startActivity(new Intent(context, PersonSpeakActivity.class));
 			break;
 
 		default:

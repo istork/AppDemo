@@ -36,7 +36,7 @@ public class GlobalConfig {
 			+ GlobalConfig.REQUEST_IMEI	+ PhoneMessage.imei
 			+ GlobalConfig.APP_VERSION	+ PhoneMessage.appVersonName;
 	
-	public static final String baseUrl = "http://gw.api.taobao.com/";//正式
+	public static final String baseUrl = "http://www.ym18.com/ceshi/";//正式
 	
 	public static final String goodsurl = baseUrl+"router/rest?";
 	public static final String registerUrl = baseUrl+"wap/member/register.php?";
