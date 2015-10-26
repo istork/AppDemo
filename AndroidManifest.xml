@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="21" />
+        android:targetSdkVersion="17" />
 
     <application
         android:name="com.wotingfm.BSApplication"
@@ -181,6 +181,11 @@
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
+        <activity android:name=".activity.login.WelcomeActivity"
+             android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <service android:name=".receiver.FloatingWindowService"></service>
     </application>
     <!-- 蓝牙管理 -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
