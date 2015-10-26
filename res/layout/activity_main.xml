@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/text_line_1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dip"
+                    android:background="@color/WHITE" >
+
+                    <LinearLayout
+                        android:id="@+id/main_lin_1"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/main_image_1"
+                            android:layout_width="35dip"
+                            android:layout_height="30dip"
+                            android:src="@drawable/tab1_down" />
+
+                        <TextView
+                            android:id="@+id/main_tv_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dip"
+                            android:text="首页"
+                            android:textColor="@color/beijing"
+                            android:textSize="@dimen/activity_normal_textone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_lin_2"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/main_image_2"
+                            android:layout_width="35dip"
+                            android:layout_height="30dip"
+                            android:src="@drawable/tab2" />
+
+                        <TextView
+                            android:id="@+id/main_tv_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dip"
+                            android:text="对讲"
+                            android:textColor="@color/beijing"
+                            android:textSize="@dimen/activity_normal_textone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_lin_3"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/main_image_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/play_icon_new" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_lin_4"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/main_image_4"
+                            android:layout_width="35dip"
+                            android:layout_height="30dip"
+                            android:src="@drawable/tab4" />
+
+                        <TextView
+                            android:id="@+id/main_tv_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dip"
+                            android:text="消息"
+                            android:textColor="@color/beijing"
+                            android:textSize="@dimen/activity_normal_textone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_lin_5"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/main_image_5"
+                            android:layout_width="35dip"
+                            android:layout_height="30dip"
+                            android:src="@drawable/tab5" />
+
+                        <TextView
+                            android:id="@+id/main_tv_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dip"
+                            android:text="设置"
+                            android:textColor="@color/beijing"
+                            android:textSize="@dimen/activity_normal_textone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
