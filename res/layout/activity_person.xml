@@ -30,7 +30,7 @@
                     android:contentDescription="@null"
                     android:src="@drawable/touxiangnew" />
 
-                <com.xl.demo.ui.CircularImage
+                <com.wotingfm.widgetui.CircularImage
                     android:id="@+id/img_hardimagdenglu"
                     android:layout_width="70dip"
                     android:layout_height="70dip" />

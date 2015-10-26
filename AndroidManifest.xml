@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xl.demo"
+    package="com.wotingfm"
     android:versionCode="1"
     android:versionName="1.0.0" >
 
@@ -9,11 +9,11 @@
         android:targetSdkVersion="21" />
 
     <application
-        android:name="com.xl.demo.BSApplication"
+        android:name="com.wotingfm.BSApplication"
         android:icon="@drawable/app_logo"
         android:label="@string/app_name" >
         <activity
-            android:name="com.xl.demo.activity.login.SplashActivity"
+            android:name="com.wotingfm.activity.login.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
             <intent-filter>
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.xl.demo.activity.main.MainActivity"
+            android:name="com.wotingfm.activity.main.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar" >
         </activity>
@@ -34,7 +34,7 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.goods.GoodsIndexActivity"
+            android:name="com.wotingfm.activity.bf.GoodsIndexActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -46,7 +46,7 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.xl.demo.activity.login.LoginActivity"
+            android:name="com.wotingfm.activity.login.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -94,13 +94,13 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.goods.BoFangActivity"
+            android:name="com.wotingfm.activity.bf.BoFangActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.goods.BoFangListActivity"
+            android:name="com.wotingfm.activity.bf.BoFangListActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -124,13 +124,13 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.goods.FMBoFangActivity"
+            android:name="com.wotingfm.activity.bf.FMBoFangActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.goods.FMbdOldListActivity"
+            android:name="com.wotingfm.activity.bf.FMbdOldListActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -142,7 +142,7 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.goods.BoFangBActivity"
+            android:name="com.wotingfm.activity.bf.BoFangBActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
