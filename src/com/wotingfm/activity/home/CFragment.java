@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
-import com.wotingfm.activity.bf.BoFangBActivity;
-import com.wotingfm.activity.bf.BoFangListActivity;
-import com.wotingfm.activity.bf.FMBoFangActivity;
-import com.wotingfm.activity.bf.FMbdOldListActivity;
-import com.wotingfm.commactivity.BaseFragment;
+import com.wotingfm.activity.play.BoFangBActivity;
+import com.wotingfm.activity.play.BoFangListActivity;
+import com.wotingfm.activity.play.FMBoFangActivity;
+import com.wotingfm.activity.play.FMbdOldListActivity;
+import com.wotingfm.main.commonactivity.BaseFragment;
 import com.wotingfm.R;
 
 public class CFragment extends BaseFragment  implements OnClickListener{

@@ -28,5 +28,4 @@
             android:textColor="#C8ff4366"
             android:textSize="35sp" />
     </LinearLayout>
-
-</LinearLayout>
+    </LinearLayout>

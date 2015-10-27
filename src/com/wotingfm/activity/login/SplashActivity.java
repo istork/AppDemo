@@ -2,7 +2,7 @@ package com.wotingfm.activity.login;
 
 
 import com.wotingfm.activity.main.MainActivity;
-import com.wotingfm.common.StringConstant;
+import com.wotingfm.main.common.StringConstant;
 import com.wotingfm.receiver.FloatingWindowService;
 import com.wotingfm.R;
 
@@ -31,9 +31,9 @@ public class SplashActivity extends Activity {
 		//		context = SplashActivity.this;
 		sharedPreferences = this.getSharedPreferences("wotingfm",Context.MODE_PRIVATE);
 		first = sharedPreferences.getString(StringConstant.FIRST, "0");//用户名，昵称
-		Intent show = new Intent(this, FloatingWindowService.class);
-		show.putExtra(FloatingWindowService.OPERATION, FloatingWindowService.OPERATION_SHOW);
-		startService(show);
+//		Intent show = new Intent(this, FloatingWindowService.class);
+//		show.putExtra(FloatingWindowService.OPERATION, FloatingWindowService.OPERATION_SHOW);
+//		startService(show);
 		setview();
 		//		new Handler().postDelayed(new MyRunnable(), LOADFINISH);
 	}

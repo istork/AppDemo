@@ -3,7 +3,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.wotingfm.IProcess.ICondition;
+import com.wotingfm.main.IProcess.ICondition;
 import com.wotingfm.utils.CommonHelper;
 /**
  *  Function:

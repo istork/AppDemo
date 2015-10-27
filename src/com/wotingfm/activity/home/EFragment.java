@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.wotingfm.R;
-import com.wotingfm.commactivity.BaseFragment;
+import com.wotingfm.main.commonactivity.BaseFragment;
 
 public class EFragment extends BaseFragment  {
 	private FragmentActivity context;

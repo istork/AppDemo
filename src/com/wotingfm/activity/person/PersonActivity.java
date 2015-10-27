@@ -3,8 +3,8 @@ package com.wotingfm.activity.person;
 
 
 import com.shenstec.activity.annotation.ViewInject;
-import com.wotingfm.activity.login.LoginActivity;
-import com.wotingfm.commactivity.BaseActivity;
+import com.wotingfm.activity.login.login.activity.LoginActivity;
+import com.wotingfm.main.commonactivity.BaseActivity;
 import com.wotingfm.utils.ToastUtil;
 import com.wotingfm.R;
 

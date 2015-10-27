@@ -16,7 +16,7 @@ import android.os.Build;
 import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;
 
-import com.wotingfm.GlobalConfig;
+import com.wotingfm.main.commonactivity.GlobalConfig;
 public class CommonHelper {
 
 	private static boolean isshowdownloaddialog_ = true;

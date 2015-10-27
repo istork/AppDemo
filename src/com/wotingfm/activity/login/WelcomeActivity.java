@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.wotingfm.R;
 import com.wotingfm.activity.main.MainActivity;
 import com.wotingfm.adapter.BasePagerAdapter;
-import com.wotingfm.common.StringConstant;
+import com.wotingfm.main.common.StringConstant;
 
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;

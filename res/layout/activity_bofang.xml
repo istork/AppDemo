@@ -155,6 +155,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/lin_bf"
                             android:layout_width="0dip"
                             android:layout_height="match_parent"
                             android:layout_weight="1"

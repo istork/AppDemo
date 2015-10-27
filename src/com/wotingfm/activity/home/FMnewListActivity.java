@@ -6,8 +6,11 @@ import java.util.ArrayList;
 
 
 
+
+
+
 import com.wotingfm.adapter.MyFragmentPagerAdapter;
-import com.wotingfm.commactivity.BaseFragmentActivity;
+import com.wotingfm.main.commonactivity.BaseFragmentActivity;
 import com.wotingfm.R;
 
 import android.content.Context;

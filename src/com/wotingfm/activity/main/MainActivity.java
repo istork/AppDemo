@@ -1,13 +1,13 @@
 package com.wotingfm.activity.main;
 
 
-import com.wotingfm.activity.bf.BoFangActivity;
 import com.wotingfm.activity.home.FirstActivity;
 import com.wotingfm.activity.home.HomeActivity;
+import com.wotingfm.activity.interphone.DuiJiangActivity;
+import com.wotingfm.activity.interphone.SpeakSetActivity;
 import com.wotingfm.activity.person.PersonActivity;
+import com.wotingfm.activity.play.BoFangActivity;
 import com.wotingfm.activity.set.SetActivity;
-import com.wotingfm.activity.speak.DuiJiangActivity;
-import com.wotingfm.activity.speak.SpeakSetActivity;
 import com.wotingfm.utils.CommonHelper;
 import com.wotingfm.R;
 

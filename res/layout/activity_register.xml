@@ -134,7 +134,8 @@
             android:background="@color/app_bg" />
 
         <EditText
-            android:id="@+id/edittext_conferm"
+            android:id="@+id/edittext_confirm"
+
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@color/WHITE"

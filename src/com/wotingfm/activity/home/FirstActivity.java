@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import com.baidu.voicerecognition.android.ui.BaiduASRDigitalDialog;
 import com.baidu.voicerecognition.android.ui.DialogRecognitionListener;
-import com.wotingfm.activity.bf.BoFangActivity;
+import com.wotingfm.activity.play.BoFangActivity;
 import com.wotingfm.utils.Config;
 import com.wotingfm.utils.Constants;
 import com.wotingfm.R;

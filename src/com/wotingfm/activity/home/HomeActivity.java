@@ -7,8 +7,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.wotingfm.adapter.MyFragmentPagerAdapter;
-import com.wotingfm.commactivity.BaseActivity;
-import com.wotingfm.commactivity.BaseFragmentActivity;
+import com.wotingfm.main.commonactivity.BaseActivity;
+import com.wotingfm.main.commonactivity.BaseFragmentActivity;
 import com.wotingfm.utils.PhoneMessage;
 import com.wotingfm.utils.ToastUtil;
 import com.wotingfm.R;

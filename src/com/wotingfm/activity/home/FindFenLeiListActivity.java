@@ -1,7 +1,7 @@
 package com.wotingfm.activity.home;
 
 
-import com.wotingfm.activity.bf.BoFangActivity;
+import com.wotingfm.activity.play.BoFangActivity;
 import com.wotingfm.R;
 
 import android.app.Activity;

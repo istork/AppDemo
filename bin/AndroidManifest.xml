@@ -9,7 +9,7 @@
         android:targetSdkVersion="17" />
 
     <application
-        android:name="com.wotingfm.BSApplication"
+        android:name="com.wotingfm.main.commonactivity.BSApplication"
         android:icon="@drawable/app_logo"
         android:label="@string/app_name" >
         <activity
@@ -34,7 +34,7 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.bf.GoodsIndexActivity"
+            android:name="com.wotingfm.activity.play.GoodsIndexActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -46,7 +46,7 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.login.LoginActivity"
+            android:name="com.wotingfm.activity.login.login.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -58,49 +58,49 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.speak.DuiJiangActivity"
+            android:name="com.wotingfm.activity.interphone.DuiJiangActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.speak.SpeakaActivity"
+            android:name="com.wotingfm.activity.interphone.SpeakaActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.speak.SpeakActivity"
+            android:name="com.wotingfm.activity.interphone.SpeakActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.speak.SpeakAddActivity"
+            android:name="com.wotingfm.activity.interphone.SpeakAddActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.speak.SpeakAddGroupActivity"
+            android:name="com.wotingfm.activity.interphone.SpeakAddGroupActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.speak.SpeakSetActivity"
+            android:name="com.wotingfm.activity.interphone.SpeakSetActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.bf.BoFangActivity"
+            android:name="com.wotingfm.activity.play.BoFangActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.bf.BoFangListActivity"
+            android:name="com.wotingfm.activity.play.BoFangListActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -124,13 +124,13 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.bf.FMBoFangActivity"
+            android:name="com.wotingfm.activity.play.FMBoFangActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.bf.FMbdOldListActivity"
+            android:name="com.wotingfm.activity.play.FMbdOldListActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -142,7 +142,7 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.bf.BoFangBActivity"
+            android:name="com.wotingfm.activity.play.BoFangBActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -158,34 +158,54 @@
         </service>
 
         <activity
-            android:name=".activity.speak.PersonSpeakActivity"
+            android:name="com.wotingfm.activity.interphone.PersonSpeakActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.speak.SpeakgroupActivity"
+            android:name="com.wotingfm.activity.interphone.SpeakgroupActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.speak.GroupFindActivity"
+            android:name="com.wotingfm.activity.interphone.GroupFindActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name=".activity.login.RegisterActivity"
+            android:name="com.wotingfm.activity.login.register.activity.RegisterActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
-        <activity android:name=".activity.login.WelcomeActivity"
-             android:screenOrientation="portrait"
+        <activity
+            android:name="com.wotingfm.activity.login.WelcomeActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
-            android:windowSoftInputMode="adjustPan"></activity>
-        <service android:name=".receiver.FloatingWindowService"></service>
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        
+          <activity
+            android:name="com.weiny.MmsPlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan"  >
+        </activity>
+        
+        
+        <service android:name=".receiver.FloatingWindowService" >
+        </service>
+
+        <activity
+            android:name="com.wotingfm.activity.login.forgetpassword.activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
     </application>
     <!-- 蓝牙管理 -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -255,15 +275,13 @@
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 ///
-<uses-permission android:name="android.permission.RECORD_AUDIO"/>
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 //
-<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-<uses-permission android:name="android.permission.BROADCAST_STICKY"/>
-<uses-permission android:name="android.permission.BLUETOOTH"/>
-    
-    
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
 
 </manifest>
