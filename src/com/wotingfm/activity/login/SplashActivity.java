@@ -4,9 +4,11 @@ package com.wotingfm.activity.login;
 import com.wotingfm.activity.main.MainActivity;
 import com.wotingfm.main.common.StringConstant;
 import com.wotingfm.receiver.FloatingWindowService;
+import com.wotingfm.utils.Utils;
 import com.wotingfm.R;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,11 +25,13 @@ public class SplashActivity extends Activity {
 	private SharedPreferences sharedPreferences;
 	private String first;
 	private View view;
+	private Dialog dialog;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		view = View.inflate(this, R.layout.activity_splash, null);
 		setContentView(view);
+		dialog = Utils.Dialogph(this, "正在加载", dialog);
 		//		context = SplashActivity.this;
 		sharedPreferences = this.getSharedPreferences("wotingfm",Context.MODE_PRIVATE);
 		first = sharedPreferences.getString(StringConstant.FIRST, "0");//用户名，昵称
@@ -74,6 +78,9 @@ public class SplashActivity extends Activity {
 						// 设置Activity的切换效果
 						//						overridePendingTransition(R.anim.in_from_right,
 						//								R.anim.out_to_left);
+						if(dialog!=null){
+							dialog.dismiss();
+						}
 						if(first!=null&&first.equals("1")){
 							startActivity(new Intent(SplashActivity.this, MainActivity.class));
 						}else{

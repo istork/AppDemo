@@ -1,7 +1,7 @@
 package com.wotingfm.activity.login.register.response;
 
+import com.wotingfm.activity.login.register.model.UserInfo;
 
-import com.wotingfm.activity.login.login.model.UserInfo;
 
 public class RegisterResponse extends RegisterDefaultResponse {
 

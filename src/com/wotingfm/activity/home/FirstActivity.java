@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.baidu.voicerecognition.android.ui.BaiduASRDigitalDialog;
 import com.baidu.voicerecognition.android.ui.DialogRecognitionListener;
+import com.weiny.MmsPlayerActivity;
 import com.wotingfm.activity.play.BoFangActivity;
 import com.wotingfm.utils.Config;
 import com.wotingfm.utils.Constants;
@@ -26,10 +27,43 @@ public class FirstActivity extends Activity {
 	  private BaiduASRDigitalDialog mDialog = null;
 	private EditText mResult;
 	private DialogRecognitionListener mRecognitionListener;
+	private LinearLayout lin_aaa;
+	private LinearLayout lin_bbb;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_first);
+		
+		
+		
+		
+		
+		
+		
+		lin_aaa = (LinearLayout) findViewById(R.id.lin_aaa);
+		lin_aaa.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent	intent = new Intent(FirstActivity.this, MmsPlayerActivity.class);      
+				intent.putExtra("path", "mms://alive.rbc.cn/fm1039");     
+				startActivity(intent); 
+			}
+		});
+		lin_bbb = (LinearLayout) findViewById(R.id.lin_bbb);
+		lin_bbb.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent	intent1 = new Intent(FirstActivity.this, MmsPlayerActivity.class);      
+				intent1.putExtra("path", "mms://alive.rbc.cn/fm974");     
+				startActivity(intent1); 
+			}
+		});
+		////////////////////
+		
 	     mResult = (EditText) findViewById(R.id.editText);
 	        mRecognitionListener = new DialogRecognitionListener() {
 

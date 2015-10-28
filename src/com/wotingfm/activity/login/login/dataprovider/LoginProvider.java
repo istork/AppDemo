@@ -5,6 +5,9 @@ import org.json.JSONObject;
 
 import android.content.Context;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.wotingfm.activity.login.login.model.loginmessage;
 import com.wotingfm.activity.login.login.response.LoginResponse;
 import com.wotingfm.activity.login.register.request.RegisterRequest;
 import com.wotingfm.main.common.TaskConstant;
@@ -35,29 +38,22 @@ public class LoginProvider extends DefaultDataProvider {
 	public Object parserJson2Obj(String jsonString) {
 		// TODO Auto-generated method stub
 		System.out.println("jsonString = "+jsonString);
-		String rev="";
-		String userid="";
-		try {
-			JSONObject jsonObject = new JSONObject(jsonString);
-			rev = jsonObject.getString("REV");
-			userid = jsonObject.getString("userid");
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return new LoginResponse(rev, userid);
+		loginmessage list = new loginmessage();
+	    Gson gson=new Gson();
+	    list=gson.fromJson(jsonString, new TypeToken<loginmessage>(){}.getType());
+		return new LoginResponse(list);
 	}
 
 	public void sendRequest(int taskId,String username,String password) {
 		RegisterRequest request = new RegisterRequest();
 		JSONObject jsonObject = new JSONObject();
 		try {
-//			jsonObject.put("machine", request.machine);
-//			jsonObject.put("type", request.type);
-//			jsonObject.put("screen", request.screen);
-//			jsonObject.put("imei", request.imei);
-			jsonObject.put("mobile", "小辛");
-			jsonObject.put("password", password);
+		jsonObject.put("machine", request.machine);
+		jsonObject.put("type", request.type);
+		jsonObject.put("screen", request.screen);
+		jsonObject.put("imei", request.imei);
+		jsonObject.put("username",username);
+		jsonObject.put("password", password);
 			new RemoteHandle(this, request, jsonObject.toString(), taskId).start();
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block

@@ -28,13 +28,13 @@ public class RequestEntity {
 
 	public void switchUrl(final int taskId) {
 		this.current_taskId = taskId;
-		String channelAndImei = GlobalConfig.REQUEST_CHANNELID
+/*		String channelAndImei = GlobalConfig.REQUEST_CHANNELID
 				+ PhoneMessage.channelId + GlobalConfig.REQUEST_IMEI
 				+ PhoneMessage.imei + GlobalConfig.APP_VERSION
-				+ PhoneMessage.appVersonName;
+				+ PhoneMessage.appVersonName;*/
 		switch (taskId) {
 		case TaskConstant.TASK_REGISTER:
-			url = GlobalConfig.registerUrl+channelAndImei;
+			url = GlobalConfig.registerUrl;
 			break;
 		case TaskConstant.TASK_LOGIN:
 			url = GlobalConfig.loginUrl;
@@ -43,7 +43,10 @@ public class RequestEntity {
 			url = GlobalConfig.goodsurl;
 			break;
 		case TaskConstant.Task_Forget:
-			url=GlobalConfig.goodsurl;
+			url=GlobalConfig.forgetUrl;
+			break;
+		case TaskConstant.Task_Reset:
+			url=GlobalConfig.ResetPassWordUrl;
 			break;
 		}
 		System.out.println("url = "+url);

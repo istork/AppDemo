@@ -4,10 +4,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.wotingfm.activity.login.login.model.UserInfo;
+import com.wotingfm.activity.login.register.model.UserInfo;
 import com.wotingfm.activity.login.register.request.RegisterRequest;
 import com.wotingfm.activity.login.register.response.RegisterResponse;
 import com.wotingfm.main.common.TaskConstant;
@@ -38,27 +39,25 @@ public class RegisterProvider extends DefaultDataProvider {
 	public Object parserJson2Obj(String jsonString) {
 		// TODO Auto-generated method stub
 		System.out.println("jsonString = "+jsonString);
-	
-	
-		   UserInfo list = new UserInfo();
-			Gson gson=new Gson();
-			list=gson.fromJson(jsonString, new TypeToken<UserInfo>(){}.getType());
+		UserInfo list = new UserInfo();
+	    Gson gson=new Gson();
+	    list=gson.fromJson(jsonString, new TypeToken<UserInfo>(){}.getType());
 		return new RegisterResponse(list);
 	}
 
 
-	public void sendRequest(int taskId, String phone,String username,String password,String cpassword) {
+	public void sendRequest(int taskId,String username,String password) {
 		RegisterRequest request = new RegisterRequest();
 		JSONObject jsonObject = new JSONObject();
 		try {
-			jsonObject.put("machine", request.machine);
-			jsonObject.put("type", request.type);
-			jsonObject.put("screen", request.screen);
-			jsonObject.put("mobile", phone);
-			jsonObject.put("truename", username);
-			jsonObject.put("password", password);
-			jsonObject.put("cpassword", cpassword);
+			jsonObject.put("SessionId", "0");
+			jsonObject.put("GPS", "111");
+			jsonObject.put("ScreenSize", request.screen);
+			jsonObject.put("IMEI", request.imei);
+			jsonObject.put("UserName", username);
+			jsonObject.put("Password", password);
 			System.out.println("jsonObject = "+jsonObject.toString());
+			Log.e("zhuce", jsonObject.toString()+"");
 			new RemoteHandle(this, request, jsonObject.toString(), taskId).start();
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block

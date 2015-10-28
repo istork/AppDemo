@@ -8,5 +8,6 @@ public class TaskConstant {
 	public static final int TASK_LOGIN = 2;
 	public static final int TASK_GOODS = 3;
 	public static final int Task_Forget=4; 
+	public static final int Task_Reset=5; 
 
 }

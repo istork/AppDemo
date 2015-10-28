@@ -1,10 +1,7 @@
 package com.wotingfm.activity.main;
-
-
+import com.weiny.MmsPlayerActivity;
 import com.wotingfm.activity.home.FirstActivity;
-import com.wotingfm.activity.home.HomeActivity;
 import com.wotingfm.activity.interphone.DuiJiangActivity;
-import com.wotingfm.activity.interphone.SpeakSetActivity;
 import com.wotingfm.activity.person.PersonActivity;
 import com.wotingfm.activity.play.BoFangActivity;
 import com.wotingfm.activity.set.SetActivity;
@@ -20,8 +17,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
-
-
 public class MainActivity extends TabActivity implements OnClickListener  {
 	private TabHost tabHost;
 	// 标记选项卡
@@ -87,8 +82,8 @@ public class MainActivity extends TabActivity implements OnClickListener  {
 				.setContent(new Intent(this, FirstActivity.class)));//首页
 		tabHost.addTab(tabHost.newTabSpec("duijiang").setIndicator("duijiang")
 				.setContent(new Intent(this, DuiJiangActivity.class)));//对讲
-//		tabHost.addTab(tabHost.newTabSpec("bofang").setIndicator("bofang")
-//				.setContent(new Intent(this, BoFangActivity.class)));//播放
+		//		tabHost.addTab(tabHost.newTabSpec("bofang").setIndicator("bofang")
+		//				.setContent(new Intent(this, BoFangActivity.class)));//播放
 		tabHost.addTab(tabHost.newTabSpec("news").setIndicator("news")
 				.setContent(new Intent(this, PersonActivity.class)));//消息
 		tabHost.addTab(tabHost.newTabSpec("set").setIndicator("set")
@@ -103,13 +98,11 @@ public class MainActivity extends TabActivity implements OnClickListener  {
 		// TODO Auto-generated method stub
 		super.onPause();
 	}
-
 	//	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
 	}
-
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
@@ -137,12 +130,11 @@ public class MainActivity extends TabActivity implements OnClickListener  {
 			image5.setImageResource(R.drawable.tab5);
 			break;
 		case R.id.main_lin_3:
-//			tabHost.setCurrentTabByTag("bofang");
-			
-			
-			
-			
-			startActivity(new Intent(this, BoFangActivity.class));
+			//			tabHost.setCurrentTabByTag("bofang");
+//						startActivity(new Intent(this, BoFangActivity.class));
+			Intent	intent = new Intent(this, MmsPlayerActivity.class);      
+			intent.putExtra("path", "mms://alive.rbc.cn/fm1039");     
+			startActivity(intent); 
 			tv1.setTextColor(getResources().getColor(R.color.beijing));
 			tv2.setTextColor(getResources().getColor(R.color.beijing));
 			tv4.setTextColor(getResources().getColor(R.color.beijing));

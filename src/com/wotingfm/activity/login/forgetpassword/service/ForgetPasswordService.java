@@ -1,10 +1,11 @@
 package com.wotingfm.activity.login.forgetpassword.service;
 
-import android.content.Context;
-
 import com.wotingfm.activity.login.forgetpassword.dataprovider.ForgetProvider;
 import com.wotingfm.main.IProcess.ICondition;
 import com.wotingfm.main.service.DefaultService;
+
+import android.content.Context;
+
 
 public class ForgetPasswordService extends DefaultService {
 
@@ -19,7 +20,7 @@ public class ForgetPasswordService extends DefaultService {
 		return super.randomX;
 	}
 
-	public void sendRegisterRequest(int randomX,String username,String phone ,String email ) {
+	public void sendForgetRequest(int randomX,String username,String phone ,String email ) {
 		super.randomX = randomX;
 		new ForgetProvider(context, this).sendRequest(taskId,phone,username,email);
 	}
