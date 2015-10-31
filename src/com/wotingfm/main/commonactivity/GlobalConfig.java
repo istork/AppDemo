@@ -36,12 +36,13 @@ public class GlobalConfig {
 			+ GlobalConfig.REQUEST_IMEI	+ PhoneMessage.imei
 			+ GlobalConfig.APP_VERSION	+ PhoneMessage.appVersonName;
 	
-	public static final String baseUrl = "http://192.168.1.108:808/";//正式
+	public static final String baseUrl = "http://192.168.1.113:8080/";//正式
 	
 	public static final String goodsurl = baseUrl+"router/rest?";
 	public static final String registerUrl = baseUrl+"wt/passport/register.do?";
 	public static final String loginUrl = baseUrl+"wt/passport/mlogin.do?";
 	public static final String forgetUrl=baseUrl+"";
 	public static final String ResetPassWordUrl=baseUrl+"";
+	public static final String logoutUrl=baseUrl+"";
 	public static boolean islogin = false;
 }

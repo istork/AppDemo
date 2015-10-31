@@ -12,7 +12,6 @@ import android.content.Context;
  * 联网请求数据模型类，主要用于保存联网需要的参数
  */
 public class RequestEntity {
-
 	/** 联网url */
 	public String url;
 	/** 请求数据 */

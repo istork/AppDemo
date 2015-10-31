@@ -7,19 +7,20 @@
 <ScrollView 
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
-    <LinearLayout 
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dip"
-        android:gravity="center"
-        android:background="@drawable/user_space_top_bg"
         android:orientation="vertical" >
-        <RelativeLayout
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:background="@drawable/user_space_top_bg"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
                 android:layout_width="70dip"
                 android:layout_height="70dip" >
 
@@ -36,155 +37,190 @@
                     android:layout_height="70dip" />
             </RelativeLayout>
 
-        <TextView
-            android:id="@+id/tv_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="登录"
+                android:textColor="@color/WHITE"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
             android:layout_marginTop="10dip"
-            android:textColor="@color/WHITE"
-            android:textSize="20sp"
-            android:text="登录" />
+            android:background="@drawable/person_color"
+            android:gravity="left|center" >
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="15dip"
+                android:src="@drawable/play_record_img" />
 
-
-<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:layout_marginTop="20dip"
-        android:background="@drawable/person_color"
-        android:gravity="left|center" >
-
-        <ImageView
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:layout_marginLeft="15dip"
-            android:src="@drawable/play_record_img" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="播放历史"
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dip"
-            android:textColor="@color/BLACK"
-            android:text="播放历史" />
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0.1dip"
-        android:background="@color/text_line_1" />
-<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:background="@drawable/person_color"
-        android:gravity="left|center" >
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/text_line_1" />
 
-        <ImageView
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:layout_marginLeft="15dip"
-            android:src="@drawable/comment_img" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/person_color"
+            android:gravity="left|center" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dip"
-            android:textColor="@color/BLACK"
-            android:text="我的评论" />
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0.1dip"
-        android:background="@color/text_line_1" />
-<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:layout_marginTop="20dip"
-        android:background="@drawable/person_color"
-        android:gravity="left|center" >
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="15dip"
+                android:src="@drawable/comment_img" />
 
-        <ImageView
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:layout_marginLeft="15dip"
-            android:src="@drawable/myspace_my_device" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="我的评论"
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dip"
-            android:textColor="@color/BLACK"
-            android:text="设备同步" />
-    </LinearLayout>
-<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:layout_marginTop="20dip"
-        android:background="@drawable/person_color"
-        android:gravity="left|center" >
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/text_line_1" />
 
-        <ImageView
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:layout_marginLeft="15dip"
-            android:src="@drawable/bind_img" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+
+            android:background="@drawable/person_color"
+            android:gravity="left|center" >
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="15dip"
+                android:src="@drawable/myspace_my_device" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="设备同步"
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/text_line_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/person_color"
+            android:gravity="left|center" >
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="15dip"
+                android:src="@drawable/bind_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="账号绑定"
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dip"
-            android:textColor="@color/BLACK"
-            android:text="账号绑定" />
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0.1dip"
-        android:background="@color/text_line_1" />
-<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:background="@drawable/person_color"
-        android:gravity="left|center" >
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/text_line_1" />
 
-        <ImageView
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:layout_marginLeft="15dip"
-            android:src="@drawable/setting_uploadpwd" />
+        <LinearLayout
+            android:id="@+id/logout_forget_"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/person_color"
+            android:gravity="left|center" >
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="15dip"
+                android:src="@drawable/setting_uploadpwd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="找回密码"
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/text_line_1" />
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/person_color"
+            android:gravity="left|center" >
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="15dip"
+                android:src="@drawable/setting_uploadpwd" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="修改密码"
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/text_line_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/person_color"
+            android:gravity="left|center" >
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="15dip"
+                android:src="@drawable/setting_push" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:text="意见反馈"
+                android:textColor="@color/BLACK" />
+        </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dip"
-            android:textColor="@color/BLACK"
-            android:text="修改密码" />
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:background="@color/text_line_1" />
     </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0.1dip"
-        android:background="@color/text_line_1" />
-<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:background="@drawable/person_color"
-        android:gravity="left|center" >
+  
+    
 
-        <ImageView
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:layout_marginLeft="15dip"
-            android:src="@drawable/setting_push" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dip"
-            android:textColor="@color/BLACK"
-            android:text="意见反馈" />
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0.1dip"
-        android:background="@color/text_line_1" />
-</LinearLayout>
 </ScrollView>
 </LinearLayout>

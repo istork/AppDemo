@@ -6,8 +6,15 @@ public class loginmessage {
 
 	 private String ReturnType;
 	 private String Sessionid;
-	
+	 private String Message;
 private List<UserInfo>  UserInfo;
+public String getMessage() {
+	return Message;
+}
+
+public void setMessage(String message) {
+	Message = message;
+}
 
 public String getReturnType() {
 	return ReturnType;

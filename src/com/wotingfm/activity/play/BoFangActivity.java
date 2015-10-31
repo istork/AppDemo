@@ -1,7 +1,7 @@
 package com.wotingfm.activity.play;
 
 
-import com.weiny.MmsPlayerActivity;
+//import com.weiny.MmsPlayerActivity;
 import com.wotingfm.R;
 
 import android.app.Activity;
@@ -35,7 +35,7 @@ public class BoFangActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				intent = new Intent(BoFangActivity.this, MmsPlayerActivity.class);      
+				intent = new Intent(BoFangActivity.this, null/*MmsPlayerActivity.class*/);      
 				intent.putExtra("path", "mms://alive.rbc.cn/fm1039");     
 				 startActivity(intent); 
 			}

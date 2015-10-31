@@ -16,10 +16,13 @@ import java.util.List;
 
 
 
+
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import android.app.ActivityManager;
+import android.app.Application;
 import android.app.Dialog;
 import android.app.KeyguardManager;
 import android.app.Notification;
@@ -58,6 +61,7 @@ import android.widget.TextView;
 import com.shenstec.utils.DateUtils;
 import com.shenstec.utils.file.FileManager;
 import com.wotingfm.R;
+import com.wotingfm.main.common.StringConstant;
 
 
 public class Utils {
@@ -93,6 +97,16 @@ public class Utils {
 		Editor editor = sp.edit();
 		editor.putString("log_text", text);
 		editor.commit();
+	}
+	
+	
+	///获取SessionId
+	public static String getSessionId(Context context){
+		SharedPreferences sp = 
+				context.getSharedPreferences("wotingfm", Context.MODE_PRIVATE);
+	    String SessionId= sp.getString(StringConstant.SESSIONID, "0");
+		return SessionId;
+		
 	}
 
 

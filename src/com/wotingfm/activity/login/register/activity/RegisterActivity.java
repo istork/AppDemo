@@ -4,9 +4,11 @@ package com.wotingfm.activity.login.register.activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Message;
 import android.text.Html;
 import android.util.Log;
@@ -22,6 +24,7 @@ import com.wotingfm.R;
 import com.wotingfm.activity.login.register.model.UserInfo;
 import com.wotingfm.activity.login.register.response.RegisterResponse;
 import com.wotingfm.activity.login.register.service.RegisterService;
+import com.wotingfm.activity.main.MainActivity;
 import com.wotingfm.main.common.StringConstant;
 import com.wotingfm.main.common.TaskConstant;
 import com.wotingfm.main.commonactivity.BaseActivity;
@@ -62,10 +65,23 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
 	    username=mEditTextName.getText().toString().trim();
 		password=mEditTextPassWord.getText().toString().trim();
 		passwordcf=mEditTextPassWordConfirm.getText().toString().trim();
+
         if("".equalsIgnoreCase(username)){
         	mEditTextName.setError(Html.fromHtml("<font color=#ff0000>用户名不能为空</font>"));
             return;
 		}
+        if(username.length()<6){
+        	mEditTextName.setError(Html.fromHtml("<font color=#ff0000>用户名请输入六位以上</font>"));
+        	return;
+        }
+        if(password.length()<6){
+        	mEditTextPassWord.setError(Html.fromHtml("<font color=#ff0000>密码请输入六位以上</font>"));
+        	return;
+        }
+        if(passwordcf.length()<6){
+        	mEditTextPassWordConfirm.setError(Html.fromHtml("<font color=#ff0000>密码请输入六位以上</font>"));
+        	return;
+        }
 		if("".equalsIgnoreCase(password)){
 			mEditTextPassWord.setError(Html.fromHtml("<font color=#ff0000>密码不能为空</font>"));
 			return;
@@ -102,8 +118,10 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
 			int randomX = (int) System.currentTimeMillis();
 			new RegisterService(this, this, TaskConstant.TASK_REGISTER).sendRegisterRequest(randomX,  username, password);
 		}else{
-			ToastUtil.show_short(this, "网络失败，请检查网络");
+			ToastUtil.show_short(this, "网络连接失败，请检查网络是否正常");
 		}
+		
+		
 	}
 	public void refreshUI(Message msg) {
 
@@ -111,13 +129,8 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
 		case TaskConstant.TASK_REGISTER:
 			if(msg.obj!=null && msg.obj instanceof RegisterResponse){
 				RegisterResponse RegisterResponse=(RegisterResponse) msg.obj;
-				try {
-					 list = RegisterResponse.list;
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				String s=list.getMessage();
+                list = RegisterResponse.list;			
+				String message=list.getMessage();
 				rttype=list.getReturnType();
 				if(rttype!=null&&rttype!=""){
 				    handleReturnType(rttype);					
@@ -126,10 +139,14 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
 				}
 				Log.i("response", rttype);
 				String sessionid=list.getSessionId();
+				new AlertDialog.Builder(this).setMessage("ReturnType="+rttype+"Message="+message).
+	 			setPositiveButton("确定", null).show();   
 				SharedPreferences sp=getSharedPreferences("wotingfm", Context.MODE_PRIVATE);
 				Editor et=sp.edit();
 				et.putString(StringConstant.SESSIONID, sessionid);
 				et.commit();
+			}else{
+				Toast.makeText(RegisterActivity.this, "与服务器通信失败",1).show();
 			}
 			break;
 		}
@@ -140,12 +157,22 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
 		switch(ReturnType){
 		case 1001:
 			Toast.makeText(this,"注册成功", 1).show();
+			Handler h=new Handler();
+			h.postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					startActivity(new Intent(RegisterActivity.this,MainActivity.class));
+				}
+			}, 2000);
 			break;
 		case 1002:
 			Toast.makeText(this,"注册用户信息在平台内与其他账户名重复", 1).show();
 			break;
 		case 0000:
 			Toast.makeText(this,"注册失败", 1).show();
+			default:
+			Toast.makeText(RegisterActivity.this, "网络连接失败，请检查网络是否正常", 1).show();
 		}	
 	}
 }

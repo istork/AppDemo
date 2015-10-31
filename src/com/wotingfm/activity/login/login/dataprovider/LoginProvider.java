@@ -14,6 +14,7 @@ import com.wotingfm.main.common.TaskConstant;
 import com.wotingfm.main.dataprovider.DefaultDataProvider;
 import com.wotingfm.main.remotehandle.RemoteHandle;
 import com.wotingfm.main.service.ILogicService;
+import com.wotingfm.utils.Utils;
 
 public class LoginProvider extends DefaultDataProvider {
 
@@ -48,12 +49,13 @@ public class LoginProvider extends DefaultDataProvider {
 		RegisterRequest request = new RegisterRequest();
 		JSONObject jsonObject = new JSONObject();
 		try {
-		jsonObject.put("machine", request.machine);
-		jsonObject.put("type", request.type);
-		jsonObject.put("screen", request.screen);
-		jsonObject.put("imei", request.imei);
-		jsonObject.put("username",username);
-		jsonObject.put("password", password);
+		jsonObject.put("SessionId", Utils.getSessionId(context));	
+		jsonObject.put("Machine", request.machine);
+		jsonObject.put("MobileType", request.type);
+		jsonObject.put("ScreenSize", request.screen);
+		jsonObject.put("IMEI", request.imei);
+		jsonObject.put("UserName",username);
+		jsonObject.put("Password", password);
 			new RemoteHandle(this, request, jsonObject.toString(), taskId).start();
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
