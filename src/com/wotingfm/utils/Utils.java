@@ -6,56 +6,33 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-
-
-
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import android.app.ActivityManager;
+import net.sourceforge.pinyin4j.PinyinHelper;
+import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
+import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
+import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 import android.app.Dialog;
-import android.app.KeyguardManager;
-import android.app.Notification;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.AudioManager;
-import android.net.Uri;
 import android.os.Build;
-import android.os.Bundle;
-import android.os.Environment;
 import android.preference.PreferenceManager;
-import android.sax.StartElementListener;
 import android.text.SpannableStringBuilder;
-import android.text.TextUtils;
-import android.text.format.Time;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.shenstec.utils.DateUtils;
 import com.shenstec.utils.file.FileManager;
 import com.wotingfm.R;
 
@@ -266,7 +243,79 @@ public class Utils {
 //		 android:background="@drawable/dialog_ph"
 		return dialog;
 	}
+	/** 
+	 * 得到 全拼 
+	 *  
+	 * @param src 
+	 * @return 
+	 */  
+	public static String getPingYin(String src) {  
+		char[] t1 = null;  
+		t1 = src.toCharArray();  
+		String[] t2 = new String[t1.length];  
+		HanyuPinyinOutputFormat t3 = new HanyuPinyinOutputFormat();  
+		t3.setCaseType(HanyuPinyinCaseType.LOWERCASE);  	
+		t3.setToneType(HanyuPinyinToneType.WITHOUT_TONE);  
+		t3.setVCharType(HanyuPinyinVCharType.WITH_V);  
+		String t4 = "";  
+		int t0 = t1.length;  
+		try {  
+			for (int i = 0; i < t0; i++) {  
+				// 判断是否为汉字字符  
+				if (java.lang.Character.toString(t1[i]).matches(  
+						"[\\u4E00-\\u9FA5]+")) {  
+					t2 = PinyinHelper.toHanyuPinyinStringArray(t1[i], t3);  
+					t4 += t2[0];  
+				} else {  
+					t4 += java.lang.Character.toString(t1[i]);  
+				}  
+			}  
+			return t4;  
+		} catch (BadHanyuPinyinOutputFormatCombination e1) {  
+			e1.printStackTrace();  
+		}  
+		return t4;  
+	}  
 
+	/** 
+	 * 得到首字母 
+	 *  
+	 * @param str 
+	 * @return 
+	 */  
+	public static String getHeadChar(String str) {  
+
+		String convert = "";  
+		char word = str.charAt(0);  
+		String[] pinyinArray = PinyinHelper.toHanyuPinyinStringArray(word);  
+		if (pinyinArray != null) {  
+			convert += pinyinArray[0].charAt(0);  
+		} else {  
+			convert += word;  
+		}  
+		return convert.toUpperCase();  
+	}  
+
+	/** 
+	 * 得到中文首字母缩写 
+	 *  
+	 * @param str 
+	 * @return 
+	 */  
+	public static String getPinYinHeadChar(String str) {  
+
+		String convert = "";  
+		for (int j = 0; j < str.length(); j++) {  
+			char word = str.charAt(j);  
+			String[] pinyinArray = PinyinHelper.toHanyuPinyinStringArray(word);  
+			if (pinyinArray != null) {  
+				convert += pinyinArray[0].charAt(0);  
+			} else {  
+				convert += word;  
+			}  
+		}  
+		return convert.toUpperCase();  
+	}  
 
 
 }

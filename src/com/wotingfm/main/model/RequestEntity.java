@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 import com.wotingfm.main.common.TaskConstant;
 import com.wotingfm.main.commonactivity.GlobalConfig;
-import com.wotingfm.utils.PhoneMessage;
 
 import android.content.Context;
 
@@ -39,14 +38,26 @@ public class RequestEntity {
 		case TaskConstant.TASK_LOGIN:
 			url = GlobalConfig.loginUrl;
 			break;
-		case TaskConstant.TASK_GOODS:
-			url = GlobalConfig.goodsurl;
+		case TaskConstant.Task_GetTalkPerson:
+			url = GlobalConfig.gettalkpersonsurl;
 			break;
 		case TaskConstant.Task_Forget:
 			url=GlobalConfig.forgetUrl;
 			break;
 		case TaskConstant.Task_Reset:
 			url=GlobalConfig.ResetPassWordUrl;
+			break;
+		case TaskConstant.Task_CreatTalkGroup:
+			url=GlobalConfig.creattalkgroupUrl;
+			break;
+		case TaskConstant.Task_TalkOldList:
+			url=GlobalConfig.talkoldlistUrl;
+			break;
+		case TaskConstant.Task_TalkGroupList:
+			url=GlobalConfig.talkgrouplistUrl;
+			break;
+		case TaskConstant.Task_GroupTalk:
+			url=GlobalConfig.grouptalkUrl;
 			break;
 		}
 		System.out.println("url = "+url);

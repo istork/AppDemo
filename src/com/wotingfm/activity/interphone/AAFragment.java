@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.wotingfm.activity.interphone.persontalk.activity.PersonTalkActivity;
 import com.wotingfm.activity.login.SplashActivity;
 import com.wotingfm.activity.main.MainActivity;
 import com.wotingfm.main.commonactivity.BaseFragment;
@@ -62,34 +63,34 @@ public class AAFragment extends BaseFragment implements OnClickListener {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.lin_1:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 		case R.id.lin_2:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 		case R.id.lin_3:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 		case R.id.lin_4:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 		case R.id.lin_5:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 		case R.id.lin_6:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 		case R.id.lin_7:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 		case R.id.lin_8:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 		case R.id.lin_9:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 		case R.id.lin_10:
-			startActivity(new Intent(context, SpeakaActivity.class));
+			startActivity(new Intent(context, PersonTalkActivity.class));
 			break;
 
 		default:

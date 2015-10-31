@@ -31,7 +31,6 @@ public class SplashActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		view = View.inflate(this, R.layout.activity_splash, null);
 		setContentView(view);
-		dialog = Utils.Dialogph(this, "正在加载", dialog);
 		//		context = SplashActivity.this;
 		sharedPreferences = this.getSharedPreferences("wotingfm",Context.MODE_PRIVATE);
 		first = sharedPreferences.getString(StringConstant.FIRST, "0");//用户名，昵称
@@ -78,9 +77,6 @@ public class SplashActivity extends Activity {
 						// 设置Activity的切换效果
 						//						overridePendingTransition(R.anim.in_from_right,
 						//								R.anim.out_to_left);
-						if(dialog!=null){
-							dialog.dismiss();
-						}
 						if(first!=null&&first.equals("1")){
 							startActivity(new Intent(SplashActivity.this, MainActivity.class));
 						}else{

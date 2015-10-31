@@ -64,13 +64,13 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.interphone.SpeakaActivity"
+            android:name="com.wotingfm.activity.interphone.persontalk.activity.PersonTalkActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.interphone.SpeakActivity"
+            android:name="com.wotingfm.activity.interphone.grouptalk.activity.GroupTalkActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -158,19 +158,13 @@
         </service>
 
         <activity
-            android:name="com.wotingfm.activity.interphone.PersonSpeakActivity"
+            android:name="com.wotingfm.activity.interphone.talkpersonnews.activity.TalkPersonNewsActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.wotingfm.activity.interphone.SpeakgroupActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Light.NoTitleBar"
-            android:windowSoftInputMode="adjustPan" >
-        </activity>
-        <activity
-            android:name="com.wotingfm.activity.interphone.GroupFindActivity"
+            android:name="com.wotingfm.activity.interphone.grouplist.activity.TalkGroupListActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
@@ -187,21 +181,24 @@
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >
         </activity>
-
-        
-          <activity
+        <activity
             android:name="com.weiny.MmsPlayerActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
-            android:windowSoftInputMode="adjustPan"  >
+            android:windowSoftInputMode="adjustPan" >
         </activity>
-        
-        
+
         <service android:name=".receiver.FloatingWindowService" >
         </service>
 
         <activity
             android:name="com.wotingfm.activity.login.forgetpassword.activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.interphone.CreatTalkGroup.activity.CreatTalkGroupActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustPan" >

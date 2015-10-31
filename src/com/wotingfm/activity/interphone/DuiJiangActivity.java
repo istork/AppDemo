@@ -2,22 +2,15 @@ package com.wotingfm.activity.interphone;
 
 
 import java.util.ArrayList;
-
-
-
-
-
-
-
-
+import com.wotingfm.activity.interphone.CreatTalkGroup.activity.CreatTalkGroupActivity;
+import com.wotingfm.activity.interphone.talkoldlist.fragment.TalkOldListFragment;
+import com.wotingfm.activity.interphone.talkperson.fragment.TalkPersonFragment;
 import com.wotingfm.adapter.MyFragmentPagerAdapter;
 import com.wotingfm.main.commonactivity.BaseFragmentActivity;
 import com.wotingfm.R;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.Fragment;
@@ -29,10 +22,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+/*
+ * 对讲功能主页
+ * 辛龙
+ */
 public class DuiJiangActivity extends   BaseFragmentActivity implements
 OnClickListener {
 	private TextView view1;
@@ -51,22 +46,20 @@ OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_duijiang);
 		context = getApplicationContext();
-		
 		InitTextView();
 		InitViewPager();
 		jiDialog();
-//		lin_1.setVisibility(View.INVISIBLE);
+		//		lin_1.setVisibility(View.INVISIBLE);
 	}
 
 	private void jiDialog() {
 		View dialog=LayoutInflater.from(this).inflate(R.layout.dialoga, null);
 		LinearLayout lin_a = (LinearLayout) dialog.findViewById(R.id.lin_a);
 		lin_a.setOnClickListener(new OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				startActivity(new Intent(context, GroupFindActivity.class));
+				startActivity(new Intent(context, CreatTalkGroupActivity.class));
 				adddialog.dismiss();
 			}
 		});
@@ -103,11 +96,11 @@ OnClickListener {
 			// TODO Auto-generated method stub
 			mPager.setCurrentItem(index);
 			if(index == 0){
-//				lin_1.setVisibility(View.INVISIBLE);
+				//				lin_1.setVisibility(View.INVISIBLE);
 				view1.setTextColor(context.getResources().getColor(R.color.orangered));
 				view2.setTextColor(context.getResources().getColor(R.color.s_green));
 			}else if(index == 1){
-//				lin_1.setVisibility(View.VISIBLE);
+				//				lin_1.setVisibility(View.VISIBLE);
 				view1.setTextColor(context.getResources().getColor(R.color.s_green));
 				view2.setTextColor(context.getResources().getColor(R.color.orangered));
 			}
@@ -121,8 +114,8 @@ OnClickListener {
 		mPager = (ViewPager) findViewById(R.id.viewpager);
 		mPager.setOffscreenPageLimit(1);
 		fragmentList = new ArrayList<Fragment>();
-		Fragment btFragment = new CCFragment();
-		Fragment btFragment1 = new BBFragment();
+		Fragment btFragment = new TalkOldListFragment();
+		Fragment btFragment1 = new TalkPersonFragment();
 
 		fragmentList.add(btFragment);
 		fragmentList.add(btFragment1);
@@ -157,11 +150,11 @@ OnClickListener {
 			animation.setFillAfter(true);// 动画终止时停留在最后一帧，不然会回到没有执行前的状态
 			animation.setDuration(200);// 动画持续时间0.2秒
 			if(currIndex == 0){
-//				lin_1.setVisibility(View.INVISIBLE);
+				//				lin_1.setVisibility(View.INVISIBLE);
 				view1.setTextColor(context.getResources().getColor(R.color.orangered));
 				view2.setTextColor(context.getResources().getColor(R.color.s_green));
 			}else if(currIndex == 1){
-//				lin_1.setVisibility(View.VISIBLE);
+				//				lin_1.setVisibility(View.VISIBLE);
 				view1.setTextColor(context.getResources().getColor(R.color.s_green));
 				view2.setTextColor(context.getResources().getColor(R.color.orangered));
 			}
@@ -179,12 +172,12 @@ OnClickListener {
 		switch (v.getId()) {
 		case R.id.lin_1:
 			adddialog.show();
-//			startActivity(new Intent(context, SpeakSetActivity.class));
-//			if(type==3){
-//				startActivity(new Intent(context, SpeakAddActivity.class));
-//			}else if(type==2){
-//				startActivity(new Intent(context, SpeakAddGroupActivity.class));
-//			}
+			//			startActivity(new Intent(context, SpeakSetActivity.class));
+			//			if(type==3){
+			//				startActivity(new Intent(context, SpeakAddActivity.class));
+			//			}else if(type==2){
+			//				startActivity(new Intent(context, SpeakAddGroupActivity.class));
+			//			}
 			break;
 
 		default:

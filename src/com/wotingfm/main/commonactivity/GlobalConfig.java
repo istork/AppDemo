@@ -25,6 +25,7 @@ public class GlobalConfig {
 	public static int HTTP_SO_TIMEOUT = 60 * 1000;
 	public static int HTTP_SOCKET_BUFFER_SIZE = 8 * 1024;
 
+	
 	/**post方式请求*/
 	public static final String POST="POST";
 	/**get方式请求*/
@@ -36,12 +37,29 @@ public class GlobalConfig {
 			+ GlobalConfig.REQUEST_IMEI	+ PhoneMessage.imei
 			+ GlobalConfig.APP_VERSION	+ PhoneMessage.appVersonName;
 	
-	public static final String baseUrl = "http://192.168.1.108:808/";//正式
+//	public static final String baseUrl = "http://192.168.1.108:808/";//测试电脑
+	public static final String baseUrl = "http://192.168.1.113:8080/";//测试服务器
 	
-	public static final String goodsurl = baseUrl+"router/rest?";
+	/**image请求路径前缀*/
+//	public static final String imageurl="http://192.168.1.108:808/wt/";//电脑
+	public static final String imageurl="http://192.168.1.113:8080/wt/";//服务器
+	//注册
 	public static final String registerUrl = baseUrl+"wt/passport/register.do?";
+	//login
 	public static final String loginUrl = baseUrl+"wt/passport/mlogin.do?";
 	public static final String forgetUrl=baseUrl+"";
 	public static final String ResetPassWordUrl=baseUrl+"";
+	//对讲-小组联系人-fragment
+	public static final String gettalkpersonsurl=baseUrl+"wt/passport/getFriendList.do?";
+	//获取创建对讲小组的联系人
+	public static final String creattalkgroupUrl=baseUrl+"wt/passport/getFriendList.do?";
+	//通话中列表
+	public static final String talkoldlistUrl=baseUrl+"wt/passport/getHistoryUG.do?";
+	//对讲-小组列表
+	public static final String talkgrouplistUrl=baseUrl+"wt/group/getGroupList.do";
+	//对讲-创建对讲小组
+	public static final String talkgroupcreatUrl=baseUrl+"wt/group/buildGroup.do?";
+	//对讲-小组联系人
+	public static final String grouptalkUrl=baseUrl+"wt/group/getGroupMembers.do?";
 	public static boolean islogin = false;
 }

@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
-import com.wotingfm.activity.interphone.SpeakaActivity;
+import com.wotingfm.activity.interphone.persontalk.activity.PersonTalkActivity;
 import com.wotingfm.activity.play.BoFangListActivity;
 import com.wotingfm.main.commonactivity.BaseFragment;
 import com.wotingfm.R;
