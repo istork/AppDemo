@@ -37,18 +37,21 @@ public class GlobalConfig {
 			+ GlobalConfig.REQUEST_IMEI	+ PhoneMessage.imei
 			+ GlobalConfig.APP_VERSION	+ PhoneMessage.appVersonName;
 	
-//	public static final String baseUrl = "http://192.168.1.108:808/";//测试电脑
-	public static final String baseUrl = "http://192.168.1.113:8080/";//测试服务器
+
 	
+	
+	
+	public static final String baseUrl = "http://192.168.1.108:808/";//测试电脑
+//	public static final String baseUrl = "http://192.168.1.113:8080/";//测试服务器
 	/**image请求路径前缀*/
-//	public static final String imageurl="http://192.168.1.108:808/wt/";//电脑
-	public static final String imageurl="http://192.168.1.113:8080/wt/";//服务器
+	public static final String imageurl=baseUrl+"wt/";//服务器
 	//注册
 	public static final String registerUrl = baseUrl+"wt/passport/register.do?";
 	//login
 	public static final String loginUrl = baseUrl+"wt/passport/mlogin.do?";
 	public static final String forgetUrl=baseUrl+"";
 	public static final String ResetPassWordUrl=baseUrl+"";
+
 	//对讲-小组联系人-fragment
 	public static final String gettalkpersonsurl=baseUrl+"wt/passport/getFriendList.do?";
 	//获取创建对讲小组的联系人
@@ -61,5 +64,9 @@ public class GlobalConfig {
 	public static final String talkgroupcreatUrl=baseUrl+"wt/group/buildGroup.do?";
 	//对讲-小组联系人
 	public static final String grouptalkUrl=baseUrl+"wt/group/getGroupMembers.do?";
+	//注销登录
+	public static final String logoutUrl=baseUrl+"wt/passport/mlogout.do?";
+	//启动页登录
+	public static final String splashUrl=baseUrl+"wt/passport/entryApp.do?";
 	public static boolean islogin = false;
 }

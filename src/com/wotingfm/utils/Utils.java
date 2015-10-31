@@ -35,6 +35,7 @@ import android.widget.TextView;
 
 import com.shenstec.utils.file.FileManager;
 import com.wotingfm.R;
+import com.wotingfm.main.common.StringConstant;
 
 
 public class Utils {
@@ -70,6 +71,24 @@ public class Utils {
 		Editor editor = sp.edit();
 		editor.putString("log_text", text);
 		editor.commit();
+	}
+	
+	
+	///获取SessionId
+	public static String getSessionId(Context context){
+		SharedPreferences sp = 
+				context.getSharedPreferences("wotingfm", Context.MODE_PRIVATE);
+	    String SessionId= sp.getString(StringConstant.SESSIONID, "0");
+		return SessionId;
+		
+	}
+	///获取USERID
+	public static String getUserId(Context context){
+		SharedPreferences sp = 
+				context.getSharedPreferences("wotingfm", Context.MODE_PRIVATE);
+		String UserId= sp.getString(StringConstant.USERID, "0");
+		return UserId;
+		
 	}
 
 

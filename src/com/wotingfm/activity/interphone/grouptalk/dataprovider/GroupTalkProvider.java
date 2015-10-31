@@ -17,6 +17,7 @@ import com.wotingfm.main.common.TaskConstant;
 import com.wotingfm.main.dataprovider.DefaultDataProvider;
 import com.wotingfm.main.remotehandle.RemoteHandle;
 import com.wotingfm.main.service.ILogicService;
+import com.wotingfm.utils.Utils;
 
 public class GroupTalkProvider extends DefaultDataProvider {
 
@@ -63,8 +64,8 @@ public class GroupTalkProvider extends DefaultDataProvider {
 			jsonObject.put("ScreenSize", request.screen);
 			jsonObject.put("IMEI", request.imei);
 			jsonObject.put("GPS", "gps");
-			jsonObject.put("SessionId","iiasf");
-			jsonObject.put("UserId", "001");
+			jsonObject.put("SessionId",Utils.getSessionId(context));
+			jsonObject.put("UserId",Utils.getUserId(context));
 			jsonObject.put("GroupId", "111");
 			new RemoteHandle(this, request, jsonObject.toString(), taskId).start();
 		} catch (JSONException e) {

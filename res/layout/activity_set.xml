@@ -203,7 +203,7 @@
     </LinearLayout>
     
     <LinearLayout
-                    android:id="@+id/zhuxiao"
+                    android:id="@+id/lin_zhuxiao"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bt_left"
@@ -216,7 +216,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:padding="8dip"
-                        android:text="退出登录"
+                        android:text="注销登录"
                         android:textColor="@color/WHITE"
                         android:textSize="18sp" />
                 </LinearLayout>

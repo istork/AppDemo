@@ -1,4 +1,5 @@
 package com.wotingfm.activity.main;
+//import com.weiny.MmsPlayerActivity;
 import com.weiny.MmsPlayerActivity;
 import com.wotingfm.activity.home.FirstActivity;
 import com.wotingfm.activity.interphone.DuiJiangActivity;

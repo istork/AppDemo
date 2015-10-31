@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import com.baidu.voicerecognition.android.ui.BaiduASRDigitalDialog;
 import com.baidu.voicerecognition.android.ui.DialogRecognitionListener;
 import com.weiny.MmsPlayerActivity;
+//import com.weiny.MmsPlayerActivity;
 import com.wotingfm.activity.play.BoFangActivity;
 import com.wotingfm.utils.Config;
 import com.wotingfm.utils.Constants;
@@ -32,21 +33,14 @@ public class FirstActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_first);
-		
-		
-		
-		
-		
-		
-		
+		setContentView(R.layout.activity_first);	
 		lin_aaa = (LinearLayout) findViewById(R.id.lin_aaa);
 		lin_aaa.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent	intent = new Intent(FirstActivity.this, MmsPlayerActivity.class);      
+				Intent	intent = new Intent(FirstActivity.this,MmsPlayerActivity.class);      
 				intent.putExtra("path", "mms://alive.rbc.cn/fm1039");     
 				startActivity(intent); 
 			}
@@ -57,7 +51,7 @@ public class FirstActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent	intent1 = new Intent(FirstActivity.this, MmsPlayerActivity.class);      
+				Intent	intent1 = new Intent(FirstActivity.this,MmsPlayerActivity.class);      
 				intent1.putExtra("path", "mms://alive.rbc.cn/fm974");     
 				startActivity(intent1); 
 			}

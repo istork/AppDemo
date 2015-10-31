@@ -15,6 +15,7 @@ import com.wotingfm.main.common.TaskConstant;
 import com.wotingfm.main.dataprovider.DefaultDataProvider;
 import com.wotingfm.main.remotehandle.RemoteHandle;
 import com.wotingfm.main.service.ILogicService;
+import com.wotingfm.utils.Utils;
 
 public class RegisterProvider extends DefaultDataProvider {
 
@@ -31,7 +32,7 @@ public class RegisterProvider extends DefaultDataProvider {
 				logicService.process(response, 0);
 			}
 		}else{
-			logicService.process("注册失败", 0);
+			logicService.process(object, 0);
 		}
 	}
 
@@ -50,12 +51,14 @@ public class RegisterProvider extends DefaultDataProvider {
 		RegisterRequest request = new RegisterRequest();
 		JSONObject jsonObject = new JSONObject();
 		try {
-			jsonObject.put("SessionId", "0");
+			jsonObject.put("SessionId", Utils.getSessionId(context));
 			jsonObject.put("GPS", "111");
 			jsonObject.put("ScreenSize", request.screen);
 			jsonObject.put("IMEI", request.imei);
 			jsonObject.put("UserName", username);
 			jsonObject.put("Password", password);
+			jsonObject.put("MobileType", request.type);
+			jsonObject.put("Machine", request.machine);
 			System.out.println("jsonObject = "+jsonObject.toString());
 			Log.e("zhuce", jsonObject.toString()+"");
 			new RemoteHandle(this, request, jsonObject.toString(), taskId).start();

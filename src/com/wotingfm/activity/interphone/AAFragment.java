@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.wotingfm.activity.interphone.persontalk.activity.PersonTalkActivity;
-import com.wotingfm.activity.login.SplashActivity;
+import com.wotingfm.activity.login.splash.activity.SplashActivity;
 import com.wotingfm.activity.main.MainActivity;
 import com.wotingfm.main.commonactivity.BaseFragment;
 import com.wotingfm.R;

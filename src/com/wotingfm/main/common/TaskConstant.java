@@ -18,7 +18,6 @@ public class TaskConstant {
 	public static final int Task_TalkGroupList=8; 
 	/**对讲-群组对讲*/
 	public static final int Task_GroupTalk=9; 
-	
-
+	public static final int Task_LOGOUT=10;
 
 }

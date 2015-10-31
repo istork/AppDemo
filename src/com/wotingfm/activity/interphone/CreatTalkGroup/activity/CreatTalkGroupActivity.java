@@ -130,8 +130,8 @@ public class CreatTalkGroupActivity extends BaseActivity   implements OnClickLis
 	public void send(){
 		if(GlobalConfig.CURRENT_NETWORK_STATE_TYPE!=-1){
 			dialog = Utils.Dialogph(context, "正在获取数据", dialog);
-			String id = "001";
-			String userid = "111";
+			String id = Utils.getSessionId(context);
+			String userid = Utils.getUserId(context);
 			int randomX = (int) System.currentTimeMillis();
 			new CreatTalkGroupService(context, this, TaskConstant.Task_CreatTalkGroup).sendRequest(randomX,id,userid);
 		}else{
@@ -220,8 +220,8 @@ public class CreatTalkGroupActivity extends BaseActivity   implements OnClickLis
 		};
 		JSONObject jsonObject = new JSONObject();
 		try {
-			jsonObject.put("SessionId","12");
-			jsonObject.put("Creator","001");
+			jsonObject.put("SessionId",Utils.getSessionId(context));
+			jsonObject.put("Creator",Utils.getUserId(context));
 			jsonObject.put("Menbers","021,023,024");
 			jsonObject.put("GroupName","小辛测试");
 			JsonObjectRequest request = new JsonObjectRequest(

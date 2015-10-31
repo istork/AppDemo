@@ -3,24 +3,15 @@ package com.wotingfm.activity.login.login.model;
 public class UserInfo {
 	
 	
-	private String ReturnType;
-	private String SessionId;
-	
-	
-	public String getReturnType() {
-		return ReturnType;
+	private String UserId;
+
+	public String getUserId() {
+		return UserId;
 	}
-	public void setReturnType(String returnType) {
-		ReturnType = returnType;
+
+	public void setUserId(String userId) {
+		this.UserId = userId;
 	}
-	public String getSessionId() {
-		return SessionId;
-	}
-	public void setSessionId(String sessionId) {
-		SessionId = sessionId;
-	}
-	
-	
 	
 
 }
