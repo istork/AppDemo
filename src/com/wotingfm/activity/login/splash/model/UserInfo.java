@@ -1,0 +1,20 @@
+package com.wotingfm.activity.login.splash.model;
+
+public class UserInfo {
+	
+    public String UserId;
+    public String UserName;
+	public String getUserId() {
+		return UserId;
+	}
+	public void setUserId(String userId) {
+		UserId = userId;
+	}
+	public String getUserName() {
+		return UserName;
+	}
+	public void setUserName(String userName) {
+		UserName = userName;
+	}
+
+}
