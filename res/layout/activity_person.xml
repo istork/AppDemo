@@ -18,7 +18,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dip"
-                android:background="@drawable/user_space_top_bg"
+                android:background="@drawable/pes_bg"
                 android:gravity="center"
                 android:orientation="vertical" >
 
@@ -112,6 +112,107 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/uploadtxlayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/person_color"
+                android:gravity="left|center" >
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_marginLeft="15dip"
+                    android:src="@drawable/setting_push" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:text="上传头像"
+                    android:textColor="@color/BLACK" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:background="@color/text_line_1" />
+
+            <LinearLayout
+                android:id="@+id/lin_bingding"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/person_color"
+                android:gravity="left|center" >
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_marginLeft="15dip"
+                    android:src="@drawable/bind_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:text="账号绑定"
+                    android:textColor="@color/BLACK" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:background="@color/text_line_1" />
+
+            <LinearLayout
+                android:id="@+id/logout_forget"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/person_color"
+                android:gravity="left|center" >
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_marginLeft="15dip"
+                    android:src="@drawable/setting_uploadpwd" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:text="找回密码"
+                    android:textColor="@color/BLACK" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.1dip"
+                android:background="@color/text_line_1" />
+
+            <LinearLayout
+                android:id="@+id/lin_modify_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/person_color"
+                android:gravity="left|center" >
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_marginLeft="15dip"
+                    android:src="@drawable/setting_uploadpwd" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:text="修改密码"
+                    android:textColor="@color/BLACK" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_PlayHistory"
                 android:layout_width="match_parent"
                 android:layout_height="45dip"
                 android:layout_marginTop="10dip"
@@ -138,132 +239,7 @@
                 android:background="@color/text_line_1" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dip"
-                android:background="@drawable/person_color"
-                android:gravity="left|center" >
-
-                <ImageView
-                    android:layout_width="25dip"
-                    android:layout_height="25dip"
-                    android:layout_marginLeft="15dip"
-                    android:src="@drawable/comment_img" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dip"
-                    android:text="我的评论"
-                    android:textColor="@color/BLACK" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dip"
-                android:background="@drawable/person_color"
-                android:gravity="left|center" >
-
-                <ImageView
-                    android:layout_width="25dip"
-                    android:layout_height="25dip"
-                    android:layout_marginLeft="15dip"
-                    android:src="@drawable/myspace_my_device" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dip"
-                    android:text="设备同步"
-                    android:textColor="@color/BLACK" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dip"
-                android:background="@drawable/person_color"
-                android:gravity="left|center" >
-
-                <ImageView
-                    android:layout_width="25dip"
-                    android:layout_height="25dip"
-                    android:layout_marginLeft="15dip"
-                    android:src="@drawable/bind_img" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dip"
-                    android:text="账号绑定"
-                    android:textColor="@color/BLACK" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-
-            <LinearLayout
-                android:id="@+id/logout_forget_"
-                android:layout_width="match_parent"
-                android:layout_height="45dip"
-                android:background="@drawable/person_color"
-                android:gravity="left|center" >
-
-                <ImageView
-                    android:layout_width="25dip"
-                    android:layout_height="25dip"
-                    android:layout_marginLeft="15dip"
-                    android:src="@drawable/setting_uploadpwd" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dip"
-                    android:text="找回密码"
-                    android:textColor="@color/BLACK" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dip"
-                android:background="@drawable/person_color"
-                android:gravity="left|center" >
-
-                <ImageView
-                    android:layout_width="25dip"
-                    android:layout_height="25dip"
-                    android:layout_marginLeft="15dip"
-                    android:src="@drawable/setting_uploadpwd" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dip"
-                    android:text="修改密码"
-                    android:textColor="@color/BLACK" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-
-            <LinearLayout
+                android:id="@+id/lin_feedback"
                 android:layout_width="match_parent"
                 android:layout_height="45dip"
                 android:background="@drawable/person_color"
@@ -282,11 +258,6 @@
                     android:text="意见反馈"
                     android:textColor="@color/BLACK" />
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
         </LinearLayout>
     </ScrollView>
 

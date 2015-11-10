@@ -164,4 +164,7 @@ public class TalkOldListFragment extends BaseFragment  {
 		});
 	}
 
+	
+	
+	
 }

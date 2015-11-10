@@ -1,7 +1,5 @@
 package com.wotingfm.main.commonactivity;
 
-import com.wotingfm.utils.PhoneMessage;
-
 public class GlobalConfig {
 
 	/**渠道号前缀常量*/
@@ -25,24 +23,14 @@ public class GlobalConfig {
 	public static int HTTP_SO_TIMEOUT = 60 * 1000;
 	public static int HTTP_SOCKET_BUFFER_SIZE = 8 * 1024;
 
-	
+
 	/**post方式请求*/
 	public static final String POST="POST";
 	/**get方式请求*/
 	public static final String GET="GET";
-	public static final String NAVIAGE_PACAGE_NAME = "com.yumi.kefu";
-	
-
-	public static final String channelAndImei = GlobalConfig.REQUEST_CHANNELID + PhoneMessage.channelId 
-			+ GlobalConfig.REQUEST_IMEI	+ PhoneMessage.imei
-			+ GlobalConfig.APP_VERSION	+ PhoneMessage.appVersonName;
-	
-
-	
-	
-	
-	public static final String baseUrl = "http://192.168.1.108:808/";//测试电脑
-//	public static final String baseUrl = "http://192.168.1.113:8080/";//测试服务器
+	public static final String baseUrl = "http://182.92.175.134:808/";//云服务器
+	//	public static final String baseUrl = "http://192.168.1.108:808/";//测试电脑
+	//	public static final String baseUrl = "http://192.168.1.180:8080/";//测试服务器
 	/**image请求路径前缀*/
 	public static final String imageurl=baseUrl+"wt/";//服务器
 	//注册
@@ -68,5 +56,13 @@ public class GlobalConfig {
 	public static final String logoutUrl=baseUrl+"wt/passport/mlogout.do?";
 	//启动页登录
 	public static final String splashUrl=baseUrl+"wt/passport/entryApp.do?";
-	public static boolean islogin = false;
+	// 上传头像
+	public static final String uploadtxUrl=baseUrl+"wt/passport/uploadImg.do?";
+	//获取历史记录 此处不对 需要后台工作完成后修改
+	public static final String playHistoryUrl=baseUrl+"wt/passport/uploadImg.do?";
+	//修改密码 此处不对 需要后台工作完成后修改
+	public static final String modifyPasswordUrl=baseUrl+"wt/passport/uploadImg.do?";
+	//修改密码 此处不对 需要后台工作完成后修改
+	public static final String FeedBackUrl=baseUrl+"wt/passport/uploadImg.do?";
+
 }

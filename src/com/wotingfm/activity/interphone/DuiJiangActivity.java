@@ -2,20 +2,29 @@ package com.wotingfm.activity.interphone;
 
 
 import java.util.ArrayList;
+
+
+//import com.morlunk.jumble.JumbleService;
 import com.wotingfm.activity.interphone.CreatTalkGroup.activity.CreatTalkGroupActivity;
+//import com.wotingfm.activity.interphone.persontalk.service.PlumbleService;
 import com.wotingfm.activity.interphone.talkoldlist.fragment.TalkOldListFragment;
 import com.wotingfm.activity.interphone.talkperson.fragment.TalkPersonFragment;
 import com.wotingfm.adapter.MyFragmentPagerAdapter;
 import com.wotingfm.main.commonactivity.BaseFragmentActivity;
 import com.wotingfm.R;
+
 import android.app.Dialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,13 +48,39 @@ OnClickListener {
 	private int offset;
 	private LinearLayout lin_1;
 	private Dialog adddialog;
-
+//	private PlumbleService mService;
+//	private ServiceConnection mConnection = new ServiceConnection() {
+//		@Override
+//		public void onServiceConnected(ComponentName name, IBinder service) {
+//			mService = (PlumbleService)((JumbleService.JumbleBinder) service).getService();
+//		}
+//
+//		@Override
+//		public void onServiceDisconnected(ComponentName name) {
+//			mService = null;
+//		}
+//	};
+//	 @Override
+//	    protected void onPause() {
+//	        super.onPause();
+//	        unbindService(mConnection);
+//	    }
+//	  @Override
+//	    protected void onResume() {
+//	        super.onResume();
+//	        Intent connectIntent = new Intent(this, PlumbleService.class);
+//	        bindService(connectIntent, mConnection, 0);
+//	    }
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_duijiang);
 		context = getApplicationContext();
+
+
+
+		///////
 		InitTextView();
 		InitViewPager();
 		jiDialog();

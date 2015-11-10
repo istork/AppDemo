@@ -147,6 +147,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lin_ccc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/WHITE"
@@ -186,6 +187,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/lin_ddd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/WHITE"

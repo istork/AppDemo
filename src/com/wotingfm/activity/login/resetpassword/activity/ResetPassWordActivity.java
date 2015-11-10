@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.wotingfm.R;
@@ -23,7 +24,7 @@ import com.wotingfm.utils.ToastUtil;
 
 public class ResetPassWordActivity extends BaseActivity {
 
-	private Button Resetbtn;
+	private TextView Resetbtn;
 	private EditText Etpassword;
 	private EditText Etpasswordcf;
 	private String password;
@@ -37,7 +38,7 @@ public class ResetPassWordActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_reset_password);
-		Resetbtn = (Button) findViewById(R.id.btn_reset);
+		Resetbtn = (TextView) findViewById(R.id.btn_reset);
 		Etpassword = (EditText) findViewById(R.id.edit_newpassword);
 		Etpasswordcf = (EditText) findViewById(R.id.edittext_newpassword_confirm);
 		layout = (LinearLayout) findViewById(R.id.head_left_btn);

@@ -5,7 +5,8 @@ import java.util.ArrayList;
 
 import com.baidu.voicerecognition.android.ui.BaiduASRDigitalDialog;
 import com.baidu.voicerecognition.android.ui.DialogRecognitionListener;
-import com.weiny.MmsPlayerActivity;
+import com.compdigitec.libvlcandroidsample.AudioActivity;
+import com.compdigitec.libvlcandroidsample.VideoActivity;
 //import com.weiny.MmsPlayerActivity;
 import com.wotingfm.activity.play.BoFangActivity;
 import com.wotingfm.utils.Config;
@@ -20,7 +21,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-
 public class FirstActivity extends Activity {
 	private LinearLayout lin_more;
 	private LinearLayout lin_findvoice;
@@ -30,6 +30,8 @@ public class FirstActivity extends Activity {
 	private DialogRecognitionListener mRecognitionListener;
 	private LinearLayout lin_aaa;
 	private LinearLayout lin_bbb;
+	private View lin_ccc;
+	private LinearLayout lin_ddd;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,8 +42,9 @@ public class FirstActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent	intent = new Intent(FirstActivity.this,MmsPlayerActivity.class);      
-				intent.putExtra("path", "mms://alive.rbc.cn/fm1039");     
+				Intent	intent = new Intent(FirstActivity.this,VideoActivity.class);      
+				intent.putExtra("path", "mms://alive.rbc.cn/fm1039");  
+				intent.putExtra("content", "北京交通广播");   
 				startActivity(intent); 
 			}
 		});
@@ -51,8 +54,33 @@ public class FirstActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent	intent1 = new Intent(FirstActivity.this,MmsPlayerActivity.class);      
-				intent1.putExtra("path", "mms://alive.rbc.cn/fm974");     
+				Intent	intent1 = new Intent(FirstActivity.this,VideoActivity.class);      
+				intent1.putExtra("path", "mms://alive.rbc.cn/fm974");  
+				intent1.putExtra("content", "北京音乐广播");   
+				startActivity(intent1); 
+			}
+		});
+		lin_ccc = (LinearLayout) findViewById(R.id.lin_ccc);
+		lin_ccc.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent	intent1 = new Intent(FirstActivity.this,AudioActivity.class);      
+				intent1.putExtra("path", "http://192.168.1.113:8080/wt/asset/audio/cz_xyj_75.mp3");     
+				intent1.putExtra("content", "西游记");    
+				startActivity(intent1); 
+			}
+		});
+		lin_ddd = (LinearLayout) findViewById(R.id.lin_ddd);
+		lin_ddd.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent	intent1 = new Intent(FirstActivity.this,AudioActivity.class);      
+				intent1.putExtra("path", "http://192.168.1.113:8080/wt/asset/audio/甜蜜蜜.mp3");     
+				intent1.putExtra("content", "甜蜜蜜");    
 				startActivity(intent1); 
 			}
 		});

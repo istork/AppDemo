@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical" >
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/head_bk"
+        android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/head_left_btn"
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/head_press"
+            android:gravity="left|center" >
+
+            <ImageButton
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/back_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置"
+                android:textColor="@color/WHITE"
+                android:textSize="@dimen/activity_head_right" />
+        </LinearLayout>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="关于"
+                android:textColor="@color/WHITE"
+                android:textSize="@dimen/activity_head_center" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_weight="1"
+           android:gravity="right|center"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="60dip"
+                android:layout_height="match_parent"
+              android:gravity="right|center"
+              android:visibility="invisible"
+                    android:background="@drawable/head_press"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存"
+                       android:layout_marginRight="10dip"
+                    android:textColor="@color/WHITE"
+                    android:textSize="@dimen/activity_head_right" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dip"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/app_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center"
+                    android:text="我听FM"
+                    android:textColor="@color/orangered"
+                    android:textSize="22sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center"
+                    android:text="V 0.1.0"
+                    android:textColor="@color/orangered"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:orientation="vertical"
+                android:paddingBottom="40dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:padding="2dip"
+                    android:text="woting.com"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dip"
+                    android:text="©我听科技"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

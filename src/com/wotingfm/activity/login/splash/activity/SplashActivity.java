@@ -12,17 +12,11 @@ import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.wotingfm.activity.interphone.grouplist.model.TalkGroupList;
-import com.wotingfm.activity.login.WelcomeActivity;
 import com.wotingfm.activity.login.register.request.RegisterRequest;
-import com.wotingfm.activity.login.splash.model.UserInfo;
+import com.wotingfm.activity.login.welcome.activity.WelcomeActivity;
 import com.wotingfm.activity.main.MainActivity;
 import com.wotingfm.main.common.StringConstant;
 import com.wotingfm.main.commonactivity.GlobalConfig;
-import com.wotingfm.main.request.DefaultRequest;
-import com.wotingfm.utils.Utils;
 import com.wotingfm.R;
 
 import android.app.Activity;
@@ -41,7 +35,7 @@ import android.widget.Toast;
 
 public class SplashActivity extends Activity {
 	//	private Context context;
-	public static final int LOADFINISH = 0000;
+	public static final int LOADFINISH = 2000;
 	private SharedPreferences sharedPreferences;
 	private String first;
 	private View view;
@@ -55,16 +49,23 @@ public class SplashActivity extends Activity {
 		context = this;
 		sharedPreferences = this.getSharedPreferences("wotingfm",Context.MODE_PRIVATE);
 		first = sharedPreferences.getString(StringConstant.FIRST, "0");//用户名，昵称
-//		Intent show = new Intent(this, FloatingWindowService.class);
-//		show.putExtra(FloatingWindowService.OPERATION, FloatingWindowService.OPERATION_SHOW);
-//		startService(show);
+		//		Intent show = new Intent(this, FloatingWindowService.class);
+		//		show.putExtra(FloatingWindowService.OPERATION, FloatingWindowService.OPERATION_SHOW);
+		//		startService(show);
 		setview();
 		//		new Handler().postDelayed(new MyRunnable(), LOADFINISH);
 		new Handler().postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				send();
-		
+//				if(first!=null&&first.equals("1")){
+//					startActivity(new Intent(SplashActivity.this, MainActivity.class));
+//					finish();
+//				}else{
+//					startActivity(new Intent(SplashActivity.this, WelcomeActivity.class));
+//					finish();
+//				}
+								send();
+
 			}
 		}, LOADFINISH);
 
@@ -76,7 +77,7 @@ public class SplashActivity extends Activity {
 		// TODO Auto-generated method stub
 		RequestQueue requestQueue = Volley.newRequestQueue(this);
 		Listener<JSONObject> listener = new Response.Listener<JSONObject>() {
-			
+
 			private String ReturnType;
 			private String SessionId;
 			private String UserInfos;
@@ -99,7 +100,7 @@ public class SplashActivity extends Activity {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
+
 				try {
 					UserInfos=	arg0.getString("UserInfo");
 				} catch (JSONException e) {
@@ -107,12 +108,12 @@ public class SplashActivity extends Activity {
 					e.printStackTrace();
 				}
 
-//				 UserInfo list = new UserInfo();
-//			    Gson gson=new Gson();
-//			    list=gson.fromJson(UserInfos, new TypeToken<UserInfo>(){}.getType());
-//			    String userid = list.getUserId();
-//			    String username = list.getUserName();
-			    SharedPreferences sp=getSharedPreferences("wotingfm", Context.MODE_PRIVATE);
+				//				 UserInfo list = new UserInfo();
+				//			    Gson gson=new Gson();
+				//			    list=gson.fromJson(UserInfos, new TypeToken<UserInfo>(){}.getType());
+				//			    String userid = list.getUserId();
+				//			    String username = list.getUserName();
+				SharedPreferences sp=getSharedPreferences("wotingfm", Context.MODE_PRIVATE);
 				//测试信息
 				if(ReturnType.equals("1001")){
 					Toast.makeText(context,"登录成功", 1).show();
@@ -121,19 +122,21 @@ public class SplashActivity extends Activity {
 				}else{
 					Toast.makeText(context,"登录异常,请稍后再试", 1).show();
 				}
-				
+
 				Editor et=sp.edit();
 				et.putString(StringConstant.SESSIONID, SessionId); 
 				et.commit();
 				if(first!=null&&first.equals("1")){
 					startActivity(new Intent(SplashActivity.this, MainActivity.class));
+					finish();
 				}else{
 					startActivity(new Intent(SplashActivity.this, WelcomeActivity.class));
+					finish();
 				}
 
-				finish();
-				
-				
+
+
+
 			}
 		};
 		ErrorListener errorListener = new Response.ErrorListener() {
@@ -150,10 +153,10 @@ public class SplashActivity extends Activity {
 		RegisterRequest requests = new RegisterRequest();
 		try {
 			jsonObject.put("Machine", requests.machine);
-		    jsonObject.put("MobileType", requests.type);
-		    jsonObject.put("ScreenSize", requests.screen);
-		    jsonObject.put("IMEI", requests.imei);
-//			jsonObject.put("SessionId",Utils.getSessionId(this));
+			jsonObject.put("MobileType", requests.type);
+			jsonObject.put("ScreenSize", requests.screen);
+			jsonObject.put("IMEI", requests.imei);
+			//			jsonObject.put("SessionId",Utils.getSessionId(this));
 			JsonObjectRequest request = new JsonObjectRequest(
 					Request.Method.POST, GlobalConfig.splashUrl,jsonObject,
 					listener, errorListener);
@@ -164,7 +167,7 @@ public class SplashActivity extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 
@@ -175,22 +178,22 @@ public class SplashActivity extends Activity {
 		Animation animation = AnimationUtils.loadAnimation(this, R.anim.alpha);
 		// 给view设置动画效果
 		view.startAnimation(animation);
-//		animation.setAnimationListener(new AnimationListener() {
-//			@Override
-//			public void onAnimationStart(Animation arg0) {
-//			}
-//
-//			@Override
-//			public void onAnimationRepeat(Animation arg0) {
-//			}
-//
-//			// 这里监听动画结束的动作，在动画结束的时候开启一个线程，这个线程中绑定一个Handler,并
-//			// 在这个Handler中调用goHome方法，而通过postDelayed方法使这个方法延迟500毫秒执行，达到
-//			// 达到持续显示第一屏500毫秒的效果
-//			@Override
-//			public void onAnimationEnd(Animation arg0) {
-//			}
-//		});
+		//		animation.setAnimationListener(new AnimationListener() {
+		//			@Override
+		//			public void onAnimationStart(Animation arg0) {
+		//			}
+		//
+		//			@Override
+		//			public void onAnimationRepeat(Animation arg0) {
+		//			}
+		//
+		//			// 这里监听动画结束的动作，在动画结束的时候开启一个线程，这个线程中绑定一个Handler,并
+		//			// 在这个Handler中调用goHome方法，而通过postDelayed方法使这个方法延迟500毫秒执行，达到
+		//			// 达到持续显示第一屏500毫秒的效果
+		//			@Override
+		//			public void onAnimationEnd(Animation arg0) {
+		//			}
+		//		});
 	}
 }
 

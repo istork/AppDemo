@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="text_color_gray_deep">#ff666666</color>
+    <color name="ab_text_color_transparent">#80f1f9ff</color>
+<color name="ab_text_color">#fff1f9ff</color>
+    <color name="background">#FF1D2E5A</color>
+    <color name="guide_start_background">@color/background</color>
+    <color name="guide_end_background">#FF5494FC</color>
 
     <drawable name="translucent_background">#e0000000</drawable>
     <drawable name="transparent_background">#00000000</drawable>
@@ -21,7 +27,6 @@
 
     <color name="addblue">#3b8ede</color>
     <color name="half_transparent">#d9000000</color>
-    
     <color name="liang_lv">#51ca66</color>
     <color name="app_bg_qian">#eaeaea</color>
     <color name="app_bg">#f5f2ed</color>
@@ -356,8 +361,7 @@
     <color name="button2">#4BB9D7</color>
     <!-- 销售易 -->
     <color name="head_bk">#59AEEF</color>
-    
-    
+
     <!-- 背景3 -->
     <color name="button3">#14C8FF</color>
     <!-- 背景4 -->
@@ -371,7 +375,6 @@
     <color name="app_list_up1">#70b5ff</color>
     <!-- app_list tab -->
     <color name="app_tab">#008ED3</color>
-    
     <color name="color_111">#5bbcee</color>
     <color name="color_11">#6a77b6</color>
     <color name="color_1">#546D6F</color>
@@ -382,21 +385,19 @@
     <color name="click_btn_text">#54301c</color>
     <color name="transparent">#00000000</color>
     <color name="transparent_yq">#20000000</color>
-  
     <color name="transparenta">#00ffffff</color>
     <color name="s_greennew">#45c01a</color>
     <color name="s_greenold">#259E53</color>
-   <color name="s_endbackground">#FCFCFC</color>
-   
+    <color name="s_endbackground">#FCFCFC</color>
     <color name="black_p">#181D1F</color>
-     <color name="s_green">#f522292C</color>
-     <color name="s_qian_hui">#F5F6F6</color>
-     <color name="yellow_s">#FEDB43</color>
+    <color name="s_green">#f522292C</color>
+    <color name="s_qian_hui">#F5F6F6</color>
+    <color name="yellow_s">#FEDB43</color>
     <color name="s_hongbao">#E55025</color>
     <color name="WHITE">#ffffffff</color>
     <color name="shen_hui">#D7000000</color>
     <color name="heihui">#484748</color>
-     <color name="huang">#FBF1C3</color>
+    <color name="huang">#FBF1C3</color>
     <color name="WHITE_1">#FEFEFE</color>
     <color name="BLACK">#ff000000</color>
     <color name="huise">#ff818181</color>
@@ -534,7 +535,7 @@
     <color name="s_gray">#7D7D7D</color>
     <color name="le_ys">#F2F6E7</color>
     <color name="le_ys_1">#E6EADA</color>
-      <color name="s_q_lan">#54BEBC</color>
+    <color name="s_q_lan">#54BEBC</color>
     <color name="qian1_gray">#F9F9F9</color>
     <!-- NEW日历 -->
     <color name="calendar_active_month_bg">#ffffffff</color>
@@ -610,7 +611,6 @@
     <color name="calendar3">#78BEBE</color>
     <color name="calendar4">#7DBEBE</color>
     <color name="calendar_textcolor">#ADADAD</color>
-   
     <color name="endlinebackground">#D6D6D6</color>
     <!-- 鸡的背景颜色 -->
     <color name="calendar_hong">#FD8D59</color>
@@ -624,13 +624,11 @@
     <color name="tab_indicator_text_selected">#ffffff</color>
     <color name="tab_indicator_text_unselected">#aac5d7</color>
     <color name="page_viewer_margin_color">#007800</color>
-    
-    
-     <color name="color1">#4BACC6</color>
-      <color name="color2">#4F81BD</color>
-       <color name="color3">#C0504D</color>
-        <color name="color4">#9BBB59</color>
-         <color name="color5">#8064A2</color>
-          <color name="color6">#EC7054</color>
+    <color name="color1">#4BACC6</color>
+    <color name="color2">#4F81BD</color>
+    <color name="color3">#C0504D</color>
+    <color name="color4">#9BBB59</color>
+    <color name="color5">#8064A2</color>
+    <color name="color6">#EC7054</color>
 
 </resources>

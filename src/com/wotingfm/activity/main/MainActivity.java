@@ -1,6 +1,6 @@
 package com.wotingfm.activity.main;
 //import com.weiny.MmsPlayerActivity;
-import com.weiny.MmsPlayerActivity;
+import com.compdigitec.libvlcandroidsample.VideoActivity;
 import com.wotingfm.activity.home.FirstActivity;
 import com.wotingfm.activity.interphone.DuiJiangActivity;
 import com.wotingfm.activity.person.PersonActivity;
@@ -133,8 +133,9 @@ public class MainActivity extends TabActivity implements OnClickListener  {
 		case R.id.main_lin_3:
 			//			tabHost.setCurrentTabByTag("bofang");
 //						startActivity(new Intent(this, BoFangActivity.class));
-			Intent	intent = new Intent(this, MmsPlayerActivity.class);      
-			intent.putExtra("path", "mms://alive.rbc.cn/fm1039");     
+			Intent	intent = new Intent(this, VideoActivity.class);      
+			intent.putExtra("path", "mms://alive.rbc.cn/fm1025");  
+			intent.putExtra("content", "北京体育广播"); 
 			startActivity(intent); 
 			tv1.setTextColor(getResources().getColor(R.color.beijing));
 			tv2.setTextColor(getResources().getColor(R.color.beijing));

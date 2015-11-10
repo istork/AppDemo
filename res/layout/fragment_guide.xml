@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhihu="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/pager"
+        android:paddingBottom="100.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <ImageView
+        android:id="@id/pager_marsk"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:src="@drawable/guide_mask"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/bottons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/WHITE"
+            android:id="@id/login"
+            android:background="@drawable/bg_card_button_blue"
+            android:padding="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_xlarge"
+            android:layout_marginRight="@dimen/margin_xlarge"
+            android:minHeight="1sp"
+            android:text="登录"
+            android:layout_weight="1.0"/>
+
+        <Button
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/gray"
+            android:id="@id/register"
+            android:background="@drawable/bg_card_button_white"
+            android:padding="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_xlarge"
+            android:layout_marginRight="@dimen/margin_xlarge"
+            android:minHeight="1sp"
+            android:text="注册"
+            android:layout_weight="1.0"/>
+    </LinearLayout>
+
+    <TextSwitcher
+        android:id="@id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottons"
+        android:layout_centerHorizontal="true"
+        android:inAnimation="@anim/slide_in_down"
+        android:outAnimation="@anim/slide_out_up" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_medium"
+            android:text="我听科技"
+            android:layout_margin="@dimen/margin_small"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_margin="@dimen/margin_small"
+            />
+
+    </TextSwitcher>
+</RelativeLayout>
