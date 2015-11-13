@@ -133,10 +133,10 @@ OnClickListener {
 			if(index == 0){
 				//				lin_1.setVisibility(View.INVISIBLE);
 				view1.setTextColor(context.getResources().getColor(R.color.orangered));
-				view2.setTextColor(context.getResources().getColor(R.color.s_green));
+				view2.setTextColor(context.getResources().getColor(R.color.white));
 			}else if(index == 1){
 				//				lin_1.setVisibility(View.VISIBLE);
-				view1.setTextColor(context.getResources().getColor(R.color.s_green));
+				view1.setTextColor(context.getResources().getColor(R.color.white));
 				view2.setTextColor(context.getResources().getColor(R.color.orangered));
 			}
 
@@ -187,10 +187,10 @@ OnClickListener {
 			if(currIndex == 0){
 				//				lin_1.setVisibility(View.INVISIBLE);
 				view1.setTextColor(context.getResources().getColor(R.color.orangered));
-				view2.setTextColor(context.getResources().getColor(R.color.s_green));
+				view2.setTextColor(context.getResources().getColor(R.color.white));
 			}else if(currIndex == 1){
 				//				lin_1.setVisibility(View.VISIBLE);
-				view1.setTextColor(context.getResources().getColor(R.color.s_green));
+				view1.setTextColor(context.getResources().getColor(R.color.white));
 				view2.setTextColor(context.getResources().getColor(R.color.orangered));
 			}
 		}

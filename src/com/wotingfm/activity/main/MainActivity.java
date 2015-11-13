@@ -1,7 +1,7 @@
 package com.wotingfm.activity.main;
 //import com.weiny.MmsPlayerActivity;
 import com.compdigitec.libvlcandroidsample.VideoActivity;
-import com.wotingfm.activity.home.FirstActivity;
+import com.wotingfm.activity.home.languagesearch.activity.LanguageSearchActivity;
 import com.wotingfm.activity.interphone.DuiJiangActivity;
 import com.wotingfm.activity.person.PersonActivity;
 import com.wotingfm.activity.play.BoFangActivity;
@@ -80,7 +80,7 @@ public class MainActivity extends TabActivity implements OnClickListener  {
 		 * 主页跳转的五个界面
 		 */	 
 		tabHost.addTab(tabHost.newTabSpec("shouye").setIndicator("shouye")
-				.setContent(new Intent(this, FirstActivity.class)));//首页
+				.setContent(new Intent(this, LanguageSearchActivity.class)));//首页
 		tabHost.addTab(tabHost.newTabSpec("duijiang").setIndicator("duijiang")
 				.setContent(new Intent(this, DuiJiangActivity.class)));//对讲
 		//		tabHost.addTab(tabHost.newTabSpec("bofang").setIndicator("bofang")

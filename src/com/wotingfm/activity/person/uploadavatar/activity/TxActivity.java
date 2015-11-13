@@ -226,7 +226,7 @@ public class TxActivity extends Activity implements OnClickListener {
 					ToastUtil.show_short(context, "保存成功");
 					 SharedPreferences sp =getSharedPreferences("wotingfm", Context.MODE_PRIVATE); 
 					 Editor et = sp.edit();
-					 et.putString(StringConstant.ImageUrl, BigImageUrl);
+					 et.putString(StringConstant.IMAGEURL, BigImageUrl);
 					 et.commit(); 
 					 Log.e("", BigImageUrl); 
 					imgloader.DisplayImage(BigImageUrl.replace("\\/", "/"), TximageView, false, true,

@@ -7,11 +7,15 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <ImageView
-        android:id="@id/guide_item_1"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/guide_item_1"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textColor="@color/WHITE"
+        android:textSize="30dip"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_guide_first_01"/>
+        android:text="无论你是谁" />
+
 
     <RelativeLayout
         android:layout_width="wrap_content"

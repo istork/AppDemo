@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
+import com.wotingfm.activity.home.citylist.activity.CityListActivity;
 import com.wotingfm.activity.play.BoFangBActivity;
 import com.wotingfm.activity.play.BoFangListActivity;
 import com.wotingfm.activity.play.FMBoFangActivity;

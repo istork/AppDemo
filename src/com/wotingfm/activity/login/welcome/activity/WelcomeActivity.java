@@ -1,149 +1,133 @@
 package com.wotingfm.activity.login.welcome.activity;
 
-import com.wotingfm.R;
-import com.wotingfm.activity.login.welcome.adapter.FragmentAdapter;
-import com.wotingfm.activity.login.welcome.fragment.BaseGuideFragment;
+
+import java.util.ArrayList;
+import com.wotingfm.activity.login.login.activity.LoginActivity;
+import com.wotingfm.activity.login.register.activity.RegisterActivity;
 import com.wotingfm.activity.login.welcome.fragment.FifthGuideFragment;
 import com.wotingfm.activity.login.welcome.fragment.FirstGuideFragment;
 import com.wotingfm.activity.login.welcome.fragment.FourthGuideFragment;
 import com.wotingfm.activity.login.welcome.fragment.SecondGuideFragment;
 import com.wotingfm.activity.login.welcome.fragment.SixthGuideFragment;
 import com.wotingfm.activity.login.welcome.fragment.ThirdGuideFragment;
-import com.wotingfm.activity.main.MainActivity;
-import com.wotingfm.main.common.StringConstant;
-import android.animation.ArgbEvaluator;
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
+import com.wotingfm.adapter.MyFragmentPagerAdapter;
+import com.wotingfm.main.commonactivity.BaseFragmentActivity;
+import com.wotingfm.R;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.os.Build;
 import android.os.Bundle;
+import android.os.Message;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
-import android.util.SparseArray;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextSwitcher;
-
-public class WelcomeActivity extends ActionBarActivity {
-
-    final float PARALLAX_COEFFICIENT = 1.2f;
-    final float DISTANCE_COEFFICIENT = 0.5f;
-
-    TextSwitcher mTextSwitcher;
-
-    ViewPager mPager;
-//    CirclePageIndicator mPagerIndicator;
-
-    FragmentAdapter mAdapter;
-
-    SparseArray<int[]> mLayoutViewIdsMap = new SparseArray<int[]>();
-	private LinearLayout goto_world;
-	private SharedPreferences sharedPreferences;
-
-    private void addGuide(BaseGuideFragment fragment) {
-        mAdapter.addItem(fragment);
-        mLayoutViewIdsMap.put(fragment.getRootViewId(), fragment.getChildViewIds());
-    }
-
-	@SuppressLint("NewApi")
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
+import android.widget.TextView;
+/*
+ * 对讲功能主页
+ * 辛龙
+ */
+public class WelcomeActivity extends   BaseFragmentActivity implements
+OnClickListener {
+	private ViewPager mPager;
+	private ArrayList<Fragment> fragmentList;
+	private int bmpW;
+	private int offset;
+	private TextView tv_login;
+	private TextView tv_register;
+	private Context context;
 	@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_guide);
-        sharedPreferences = this.getSharedPreferences("wotingfm",Context.MODE_PRIVATE);
-      
-        mTextSwitcher = (TextSwitcher) findViewById(R.id.tip);
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.fragment_guide);
+		context = getApplicationContext();
+		InitViewPager();
+		 tv_login = (TextView) findViewById(R.id.tv_login);
+	        tv_register = (TextView) findViewById(R.id.tv_register);
+	        tv_login.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+				}
+			});
+	        tv_register.setOnClickListener(new OnClickListener() {
+	        	
+	        	@Override
+	        	public void onClick(View v) {
+	        		// TODO Auto-generated method stub
+	        		Intent intent = new Intent(WelcomeActivity.this,RegisterActivity.class);
+	    			startActivity(intent);
+	        	}
+	        });
+	}
 
-        mPager = (ViewPager) findViewById(R.id.pager);
-//        mPagerIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
+	/*
+	 * 初始化ViewPager
+	 */
+	public void InitViewPager() {
+		mPager = (ViewPager) findViewById(R.id.viewpager);
+		mPager.setOffscreenPageLimit(1);
+		fragmentList = new ArrayList<Fragment>();
+		Fragment btFragment1 = new FirstGuideFragment();
+		Fragment btFragment2 = new SecondGuideFragment();
+		Fragment btFragment3 = new ThirdGuideFragment();
+		Fragment btFragment4 = new FourthGuideFragment();
+		Fragment btFragment5= new FifthGuideFragment();
+		Fragment btFragment6 = new SixthGuideFragment();
+		fragmentList.add(btFragment1);
+		fragmentList.add(btFragment2);
+		fragmentList.add(btFragment3);
+		fragmentList.add(btFragment4);
+		fragmentList.add(btFragment5);
+		fragmentList.add(btFragment6);
+		mPager.setAdapter(new MyFragmentPagerAdapter(
+				getSupportFragmentManager(), fragmentList));
+		mPager.setOnPageChangeListener(new MyOnPageChangeListener());// 页面变化时的监听�?
+		mPager.setCurrentItem(0);// 设置当前显示标签页为第一�?
+	}
 
-        mAdapter = new FragmentAdapter(getSupportFragmentManager());
-        addGuide(new FirstGuideFragment());
-        addGuide(new SecondGuideFragment());
-        addGuide(new ThirdGuideFragment());
-        addGuide(new FourthGuideFragment());
-        addGuide(new FifthGuideFragment());
-        addGuide(new SixthGuideFragment());
-        mPager.setAdapter(mAdapter);
-//        mPagerIndicator.setViewPager(mPager);
-        mPager.setPageTransformer(true, new ParallaxTransformer(PARALLAX_COEFFICIENT, DISTANCE_COEFFICIENT));
-//        mPagerIndicator.setOnPageChangeListener(new GuidePageChangeListener());
-    }
+	public class MyOnPageChangeListener implements OnPageChangeListener {
+		private int one = offset * 2+ bmpW;// 两个相邻页面的偏移量
+		private int currIndex;
 
-    class ParallaxTransformer implements ViewPager.PageTransformer {
+		@Override
+		public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+			// TODO Auto-generated method stub
+		}
 
-        float parallaxCoefficient;
-        float distanceCoefficient;
+		@Override
+		public void onPageScrollStateChanged(int arg0) {
+			// TODO Auto-generated method stub
 
-        public ParallaxTransformer(float parallaxCoefficient, float distanceCoefficient) {
-            this.parallaxCoefficient = parallaxCoefficient;
-            this.distanceCoefficient = distanceCoefficient;
-        }
+		}
 
-        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-        @Override
-        public void transformPage(View page, float position) {
-            float scrollXOffset = page.getWidth() * parallaxCoefficient;
+		@Override
+		public void onPageSelected(int arg0) {
+			// TODO Auto-generated method stub
+			Animation animation = new TranslateAnimation(currIndex * one, arg0
+					* one, 0, 0);// 平移动画
+			currIndex = arg0;
+			animation.setFillAfter(true);// 动画终止时停留在最后一帧，不然会回到没有执行前的状态
+			animation.setDuration(200);// 动画持续时间0.2秒
+		}
+	}
 
-            ViewGroup pageViewWrapper = (ViewGroup) page;
-            @SuppressWarnings("SuspiciousMethodCalls")
-            int[] layer = mLayoutViewIdsMap.get(pageViewWrapper.getChildAt(0).getId());
-            for (int id : layer) {
-                View view = page.findViewById(id);
-                if (view != null) {
-                    view.setTranslationX(scrollXOffset * position);
-                }
-                scrollXOffset *= distanceCoefficient;
-            }
-        }
-    }
+	@Override
+	public void refreshUI(Message msg) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    class GuidePageChangeListener implements ViewPager.OnPageChangeListener {
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+	}
 
-        ArgbEvaluator mColorEvaluator;
 
-        int mPageWidth, mTotalScrollWidth;
-
-        int mGuideStartBackgroundColor, mGuideEndBackgroundColor;
-
-        String[] mGuideTips;
-
-        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-        public GuidePageChangeListener() {
-            mColorEvaluator = new ArgbEvaluator();
-
-            mPageWidth = getWindowManager().getDefaultDisplay().getWidth();
-            mTotalScrollWidth = mPageWidth * mAdapter.getCount();
-
-            mGuideStartBackgroundColor = getResources().getColor(R.color.guide_start_background);
-            mGuideEndBackgroundColor = getResources().getColor(R.color.guide_end_background);
-
-            mGuideTips = getResources().getStringArray(R.array.array_guide_tips);
-        }
-
-        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-        @Override
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            float ratio = (mPageWidth * position + positionOffsetPixels) / (float) mTotalScrollWidth;
-            Integer color = (Integer) mColorEvaluator.evaluate(ratio, mGuideStartBackgroundColor, mGuideEndBackgroundColor);
-            mPager.setBackgroundColor(color);
-        }
-
-        @Override
-        public void onPageSelected(int position) {
-            if (mGuideTips != null && mGuideTips.length > position) {
-                mTextSwitcher.setText(mGuideTips[position]);
-            }
-        }
-
-        @Override
-        public void onPageScrollStateChanged(int state) {
-        }
-    }
-    
 }

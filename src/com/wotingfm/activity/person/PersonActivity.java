@@ -133,7 +133,7 @@ public class PersonActivity extends BaseActivity implements OnClickListener {
 		// 再次进入该界面加载的数据
 		sharedPreferences = this.getSharedPreferences("wotingfm",Context.MODE_PRIVATE);
 		islogin = sharedPreferences.getString(StringConstant.ISLOGIN, "false");//
-		String imagurl = sharedPreferences.getString(StringConstant.ImageUrl, "imageurl");//
+		String imagurl = sharedPreferences.getString(StringConstant.IMAGEURL, "imageurl");//
 		if(islogin.equals("true")){
 			lin_show.setVisibility(View.VISIBLE);
 			lin_login.setVisibility(View.GONE);

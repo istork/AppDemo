@@ -1,7 +1,5 @@
 package com.wotingfm.activity.person.modifypassword.activity;
 
-import java.util.List;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,7 +21,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.shenstec.activity.BaseActivity;
 import com.wotingfm.R;
 import com.wotingfm.main.commonactivity.GlobalConfig;

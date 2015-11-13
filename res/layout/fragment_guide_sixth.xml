@@ -94,10 +94,12 @@
         android:gravity="center"
         android:orientation="vertical" >
 
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/guide_logo" />
+            android:text="我听FM"
+            android:textColor="@color/WHITE"
+            android:textSize="40dip" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -105,6 +107,14 @@
             android:layout_marginTop="@dimen/margin_large"
             android:gravity="center"
             android:text="@string/tip_guide_six"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/text_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_large"
+            android:gravity="center"
+            android:text="听!      听!      听!"
             android:textColor="@color/WHITE"
             android:textSize="@dimen/text_size_large" />
     </LinearLayout>

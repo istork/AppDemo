@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dip"
-        android:background="@color/red_sq"
+        android:background="@color/head_bk"
         android:gravity="center_vertical" >
 
         <LinearLayout
@@ -49,10 +49,8 @@
                 android:id="@+id/head_name_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
                 android:gravity="center"
-                android:singleLine="true"
-                android:text="省市台"
+                android:text="北京台"
                 android:textColor="@color/WHITE"
                 android:textSize="@dimen/activity_head_center" />
         </LinearLayout>
@@ -84,316 +82,72 @@
         </LinearLayout>
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/scrollView1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none" >
+        android:layout_height="match_parent" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <LinearLayout
-                android:id="@+id/lin_1"
+                android:id="@+id/lin_shoose"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="45dip"
                 android:background="@color/WHITE"
                 android:gravity="left|center" >
 
                 <TextView
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
                     android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="北京"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
+                    android:text="切换省市台"
+                    android:textColor="@color/gray" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/arrow_down" />
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
+                android:background="@color/app_bg" />
+
+            <ListView
+                android:id="@+id/listView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="上海"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="天津"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="重庆"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="广东"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="北京"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="北京"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="北京"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="北京"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="北京"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/WHITE"
-                android:gravity="left|center" >
-
-                <TextView
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="left|center"
-                    android:padding="20dip"
-                    android:text="北京"
-                    android:textColor="@color/BLACK"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="30dip"
-                    android:src="@drawable/live_more" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0.1dip"
-                android:background="@color/text_line_1" />
+                android:scrollbars="none" >
+            </ListView>
         </LinearLayout>
-    </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/lin_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+              android:layout_marginTop="45.1dip"
+              android:background="@color/transparent_yq"
+              android:visibility="gone"
+            android:orientation="vertical" >
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/WHITE"
+                android:verticalSpacing="5dip"
+                android:gravity="center"
+                android:numColumns="5"
+                android:scrollbars="none" >
+            </GridView>
+
+        </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
